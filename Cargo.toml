@@ -1,0 +1,11 @@
+[package]
+name = "auth3_sdk"
+version = "1.0.0"
+edition = "2018"
+
+[dependencies]
+grpc = "0.8.3"
+
+[lib]
+name = "auth3_sdk"
+path = "src/lib/lib.rs"
