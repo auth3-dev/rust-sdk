@@ -2,6 +2,14 @@
 name = "auth3_sdk"
 version = "1.0.0"
 edition = "2018"
+authors = ["Auth3"]
+description="Official SDK to use the Auth3.dev Identity Platform API"
+readme = "README.md"
+homepage = "https://auth3.dev/"
+repository = "https://github.com/auth3-dev/rust-sdk/"
+license = "Apache-2.0"
+license-file = "LICENSE"
+keywords = ["auth", "identity", "auth3", "authentication", "authorization"]
 
 [dependencies]
 grpc = "0.8.3"
