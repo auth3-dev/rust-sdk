@@ -6,6 +6,15 @@ The official [Auth3](https://auth3.dev/?utm_source=github&utm_medium=sdk&utm_cam
 
 Check-out the API documentation at [https://docs.auth3.dev/apis/identity-platform/administrative](https://docs.auth3.dev/apis/identity-platform/administrative?utm_source=github&utm_medium=sdk&utm_campaign=rust) for further help.
 
+## Installation
+
+Add the following line to your Cargo.toml file:
+
+```toml
+[dependencies]
+auth3_sdk = "^1.0.0"
+```
+
 ## Build
 
 From your terminal, within this folder, run:
