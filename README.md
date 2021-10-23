@@ -1,6 +1,6 @@
 # Auth3 Rust SDK
 
-The official [Auth3](https://auth3.dev/?utm_source=github&utm_medium=sdk&utm_campaign=swift) rust SDK library.
+The official [Auth3](https://auth3.dev/?utm_source=github&utm_medium=sdk&utm_campaign=rust) rust SDK library.
 
 ## API Documentation
 
