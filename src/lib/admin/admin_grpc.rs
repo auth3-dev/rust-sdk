@@ -26,6 +26,8 @@ pub trait Admin {
 
     fn get_identity(&self, o: ::grpc::ServerHandlerContext, req: ::grpc::ServerRequestSingle<super::admin::GetIdentityRequest>, resp: ::grpc::ServerResponseUnarySink<super::admin::GetIdentityResponse>) -> ::grpc::Result<()>;
 
+    fn get_identity_by_identifier(&self, o: ::grpc::ServerHandlerContext, req: ::grpc::ServerRequestSingle<super::admin::GetIdentityByIdentifierRequest>, resp: ::grpc::ServerResponseUnarySink<super::admin::GetIdentityByIdentifierResponse>) -> ::grpc::Result<()>;
+
     fn get_identities_by_attribute(&self, o: ::grpc::ServerHandlerContext, req: ::grpc::ServerRequestSingle<super::admin::GetIdentitiesByAttributeRequest>, resp: ::grpc::ServerResponseUnarySink<super::admin::GetIdentitiesByAttributeResponse>) -> ::grpc::Result<()>;
 
     fn get_identities(&self, o: ::grpc::ServerHandlerContext, req: ::grpc::ServerRequestSingle<super::admin::GetIdentitiesRequest>, resp: ::grpc::ServerResponseUnarySink<super::admin::GetIdentitiesResponse>) -> ::grpc::Result<()>;
@@ -115,6 +117,16 @@ impl AdminClient {
     pub fn get_identity(&self, o: ::grpc::RequestOptions, req: super::admin::GetIdentityRequest) -> ::grpc::SingleResponse<super::admin::GetIdentityResponse> {
         let descriptor = ::grpc::rt::ArcOrStatic::Static(&::grpc::rt::MethodDescriptor {
             name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/GetIdentity"),
+            streaming: ::grpc::rt::GrpcStreaming::Unary,
+            req_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
+            resp_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
+        });
+        self.grpc_client.call_unary(o, req, descriptor)
+    }
+
+    pub fn get_identity_by_identifier(&self, o: ::grpc::RequestOptions, req: super::admin::GetIdentityByIdentifierRequest) -> ::grpc::SingleResponse<super::admin::GetIdentityByIdentifierResponse> {
+        let descriptor = ::grpc::rt::ArcOrStatic::Static(&::grpc::rt::MethodDescriptor {
+            name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/GetIdentityByIdentifier"),
             streaming: ::grpc::rt::GrpcStreaming::Unary,
             req_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
             resp_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
@@ -455,6 +467,18 @@ impl AdminServer {
                     {
                         let handler_copy = handler_arc.clone();
                         ::grpc::rt::MethodHandlerUnary::new(move |ctx, req, resp| (*handler_copy).get_identity(ctx, req, resp))
+                    },
+                ),
+                ::grpc::rt::ServerMethod::new(
+                    ::grpc::rt::ArcOrStatic::Static(&::grpc::rt::MethodDescriptor {
+                        name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/GetIdentityByIdentifier"),
+                        streaming: ::grpc::rt::GrpcStreaming::Unary,
+                        req_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
+                        resp_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
+                    }),
+                    {
+                        let handler_copy = handler_arc.clone();
+                        ::grpc::rt::MethodHandlerUnary::new(move |ctx, req, resp| (*handler_copy).get_identity_by_identifier(ctx, req, resp))
                     },
                 ),
                 ::grpc::rt::ServerMethod::new(
