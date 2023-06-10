@@ -42,9 +42,9 @@ pub trait Admin {
 
     fn update_address(&self, o: ::grpc::ServerHandlerContext, req: ::grpc::ServerRequestSingle<super::admin::UpdateAddressRequest>, resp: ::grpc::ServerResponseUnarySink<super::admin::UpdateAddressResponse>) -> ::grpc::Result<()>;
 
-    fn get_traits(&self, o: ::grpc::ServerHandlerContext, req: ::grpc::ServerRequestSingle<super::admin::GetTraitsRequest>, resp: ::grpc::ServerResponseUnarySink<super::admin::GetTraitsResponse>) -> ::grpc::Result<()>;
+    fn get_profile(&self, o: ::grpc::ServerHandlerContext, req: ::grpc::ServerRequestSingle<super::admin::GetProfileRequest>, resp: ::grpc::ServerResponseUnarySink<super::admin::GetProfileResponse>) -> ::grpc::Result<()>;
 
-    fn update_traits(&self, o: ::grpc::ServerHandlerContext, req: ::grpc::ServerRequestSingle<super::admin::UpdateTraitsRequest>, resp: ::grpc::ServerResponseUnarySink<super::admin::UpdateTraitsResponse>) -> ::grpc::Result<()>;
+    fn update_profile(&self, o: ::grpc::ServerHandlerContext, req: ::grpc::ServerRequestSingle<super::admin::UpdateProfileRequest>, resp: ::grpc::ServerResponseUnarySink<super::admin::UpdateProfileResponse>) -> ::grpc::Result<()>;
 
     fn get_credentials(&self, o: ::grpc::ServerHandlerContext, req: ::grpc::ServerRequestSingle<super::admin::GetCredentialsRequest>, resp: ::grpc::ServerResponseUnarySink<super::admin::GetCredentialsResponse>) -> ::grpc::Result<()>;
 
@@ -204,9 +204,9 @@ impl AdminClient {
         self.grpc_client.call_unary(o, req, descriptor)
     }
 
-    pub fn get_traits(&self, o: ::grpc::RequestOptions, req: super::admin::GetTraitsRequest) -> ::grpc::SingleResponse<super::admin::GetTraitsResponse> {
+    pub fn get_profile(&self, o: ::grpc::RequestOptions, req: super::admin::GetProfileRequest) -> ::grpc::SingleResponse<super::admin::GetProfileResponse> {
         let descriptor = ::grpc::rt::ArcOrStatic::Static(&::grpc::rt::MethodDescriptor {
-            name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/GetTraits"),
+            name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/GetProfile"),
             streaming: ::grpc::rt::GrpcStreaming::Unary,
             req_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
             resp_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
@@ -214,9 +214,9 @@ impl AdminClient {
         self.grpc_client.call_unary(o, req, descriptor)
     }
 
-    pub fn update_traits(&self, o: ::grpc::RequestOptions, req: super::admin::UpdateTraitsRequest) -> ::grpc::SingleResponse<super::admin::UpdateTraitsResponse> {
+    pub fn update_profile(&self, o: ::grpc::RequestOptions, req: super::admin::UpdateProfileRequest) -> ::grpc::SingleResponse<super::admin::UpdateProfileResponse> {
         let descriptor = ::grpc::rt::ArcOrStatic::Static(&::grpc::rt::MethodDescriptor {
-            name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/UpdateTraits"),
+            name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/UpdateProfile"),
             streaming: ::grpc::rt::GrpcStreaming::Unary,
             req_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
             resp_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
@@ -567,26 +567,26 @@ impl AdminServer {
                 ),
                 ::grpc::rt::ServerMethod::new(
                     ::grpc::rt::ArcOrStatic::Static(&::grpc::rt::MethodDescriptor {
-                        name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/GetTraits"),
+                        name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/GetProfile"),
                         streaming: ::grpc::rt::GrpcStreaming::Unary,
                         req_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
                         resp_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
                     }),
                     {
                         let handler_copy = handler_arc.clone();
-                        ::grpc::rt::MethodHandlerUnary::new(move |ctx, req, resp| (*handler_copy).get_traits(ctx, req, resp))
+                        ::grpc::rt::MethodHandlerUnary::new(move |ctx, req, resp| (*handler_copy).get_profile(ctx, req, resp))
                     },
                 ),
                 ::grpc::rt::ServerMethod::new(
                     ::grpc::rt::ArcOrStatic::Static(&::grpc::rt::MethodDescriptor {
-                        name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/UpdateTraits"),
+                        name: ::grpc::rt::StringOrStatic::Static("/depot.devtools.auth.v0.identity.admin.Admin/UpdateProfile"),
                         streaming: ::grpc::rt::GrpcStreaming::Unary,
                         req_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
                         resp_marshaller: ::grpc::rt::ArcOrStatic::Static(&::grpc_protobuf::MarshallerProtobuf),
                     }),
                     {
                         let handler_copy = handler_arc.clone();
-                        ::grpc::rt::MethodHandlerUnary::new(move |ctx, req, resp| (*handler_copy).update_traits(ctx, req, resp))
+                        ::grpc::rt::MethodHandlerUnary::new(move |ctx, req, resp| (*handler_copy).update_profile(ctx, req, resp))
                     },
                 ),
                 ::grpc::rt::ServerMethod::new(

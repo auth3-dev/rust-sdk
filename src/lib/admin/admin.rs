@@ -1481,7 +1481,7 @@ pub struct GetIdentityResponse {
     pub created_at: ::protobuf::SingularPtrField<::protobuf::well_known_types::Timestamp>,
     pub updated_at: ::protobuf::SingularPtrField<::protobuf::well_known_types::Timestamp>,
     pub main_identifier: ::std::string::String,
-    pub traits_id: ::std::string::String,
+    pub profile_id: ::std::string::String,
     pub addresses_ids: ::protobuf::RepeatedField<::std::string::String>,
     pub credentials_ids: ::std::collections::HashMap<::std::string::String, ::std::string::String>,
     pub schema_id: ::std::string::String,
@@ -1620,30 +1620,30 @@ impl GetIdentityResponse {
         ::std::mem::replace(&mut self.main_identifier, ::std::string::String::new())
     }
 
-    // string traits_id = 5;
+    // string profile_id = 5;
 
 
-    pub fn get_traits_id(&self) -> &str {
-        &self.traits_id
+    pub fn get_profile_id(&self) -> &str {
+        &self.profile_id
     }
-    pub fn clear_traits_id(&mut self) {
-        self.traits_id.clear();
+    pub fn clear_profile_id(&mut self) {
+        self.profile_id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_traits_id(&mut self, v: ::std::string::String) {
-        self.traits_id = v;
+    pub fn set_profile_id(&mut self, v: ::std::string::String) {
+        self.profile_id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_traits_id(&mut self) -> &mut ::std::string::String {
-        &mut self.traits_id
+    pub fn mut_profile_id(&mut self) -> &mut ::std::string::String {
+        &mut self.profile_id
     }
 
     // Take field
-    pub fn take_traits_id(&mut self) -> ::std::string::String {
-        ::std::mem::replace(&mut self.traits_id, ::std::string::String::new())
+    pub fn take_profile_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.profile_id, ::std::string::String::new())
     }
 
     // repeated string addresses_ids = 6;
@@ -1770,7 +1770,7 @@ impl ::protobuf::Message for GetIdentityResponse {
                     ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.main_identifier)?;
                 },
                 5 => {
-                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.traits_id)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.profile_id)?;
                 },
                 6 => {
                     ::protobuf::rt::read_repeated_string_into(wire_type, is, &mut self.addresses_ids)?;
@@ -1810,8 +1810,8 @@ impl ::protobuf::Message for GetIdentityResponse {
         if !self.main_identifier.is_empty() {
             my_size += ::protobuf::rt::string_size(4, &self.main_identifier);
         }
-        if !self.traits_id.is_empty() {
-            my_size += ::protobuf::rt::string_size(5, &self.traits_id);
+        if !self.profile_id.is_empty() {
+            my_size += ::protobuf::rt::string_size(5, &self.profile_id);
         }
         for value in &self.addresses_ids {
             my_size += ::protobuf::rt::string_size(6, &value);
@@ -1845,8 +1845,8 @@ impl ::protobuf::Message for GetIdentityResponse {
         if !self.main_identifier.is_empty() {
             os.write_string(4, &self.main_identifier)?;
         }
-        if !self.traits_id.is_empty() {
-            os.write_string(5, &self.traits_id)?;
+        if !self.profile_id.is_empty() {
+            os.write_string(5, &self.profile_id)?;
         }
         for v in &self.addresses_ids {
             os.write_string(6, &v)?;
@@ -1917,9 +1917,9 @@ impl ::protobuf::Message for GetIdentityResponse {
                 |m: &mut GetIdentityResponse| { &mut m.main_identifier },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                "traits_id",
-                |m: &GetIdentityResponse| { &m.traits_id },
-                |m: &mut GetIdentityResponse| { &mut m.traits_id },
+                "profile_id",
+                |m: &GetIdentityResponse| { &m.profile_id },
+                |m: &mut GetIdentityResponse| { &mut m.profile_id },
             ));
             fields.push(::protobuf::reflect::accessor::make_repeated_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                 "addresses_ids",
@@ -1961,7 +1961,7 @@ impl ::protobuf::Clear for GetIdentityResponse {
         self.created_at.clear();
         self.updated_at.clear();
         self.main_identifier.clear();
-        self.traits_id.clear();
+        self.profile_id.clear();
         self.addresses_ids.clear();
         self.credentials_ids.clear();
         self.schema_id.clear();
@@ -2456,7 +2456,7 @@ pub struct GetIdentityByIdentifierResponse_Identity {
     pub created_at: ::protobuf::SingularPtrField<::protobuf::well_known_types::Timestamp>,
     pub updated_at: ::protobuf::SingularPtrField<::protobuf::well_known_types::Timestamp>,
     pub main_identifier: ::std::string::String,
-    pub traits_id: ::std::string::String,
+    pub profile_id: ::std::string::String,
     pub addresses_ids: ::protobuf::RepeatedField<::std::string::String>,
     pub credentials_ids: ::std::collections::HashMap<::std::string::String, ::std::string::String>,
     pub schema_id: ::std::string::String,
@@ -2595,30 +2595,30 @@ impl GetIdentityByIdentifierResponse_Identity {
         ::std::mem::replace(&mut self.main_identifier, ::std::string::String::new())
     }
 
-    // string traits_id = 5;
+    // string profile_id = 5;
 
 
-    pub fn get_traits_id(&self) -> &str {
-        &self.traits_id
+    pub fn get_profile_id(&self) -> &str {
+        &self.profile_id
     }
-    pub fn clear_traits_id(&mut self) {
-        self.traits_id.clear();
+    pub fn clear_profile_id(&mut self) {
+        self.profile_id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_traits_id(&mut self, v: ::std::string::String) {
-        self.traits_id = v;
+    pub fn set_profile_id(&mut self, v: ::std::string::String) {
+        self.profile_id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_traits_id(&mut self) -> &mut ::std::string::String {
-        &mut self.traits_id
+    pub fn mut_profile_id(&mut self) -> &mut ::std::string::String {
+        &mut self.profile_id
     }
 
     // Take field
-    pub fn take_traits_id(&mut self) -> ::std::string::String {
-        ::std::mem::replace(&mut self.traits_id, ::std::string::String::new())
+    pub fn take_profile_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.profile_id, ::std::string::String::new())
     }
 
     // repeated string addresses_ids = 6;
@@ -2745,7 +2745,7 @@ impl ::protobuf::Message for GetIdentityByIdentifierResponse_Identity {
                     ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.main_identifier)?;
                 },
                 5 => {
-                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.traits_id)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.profile_id)?;
                 },
                 6 => {
                     ::protobuf::rt::read_repeated_string_into(wire_type, is, &mut self.addresses_ids)?;
@@ -2785,8 +2785,8 @@ impl ::protobuf::Message for GetIdentityByIdentifierResponse_Identity {
         if !self.main_identifier.is_empty() {
             my_size += ::protobuf::rt::string_size(4, &self.main_identifier);
         }
-        if !self.traits_id.is_empty() {
-            my_size += ::protobuf::rt::string_size(5, &self.traits_id);
+        if !self.profile_id.is_empty() {
+            my_size += ::protobuf::rt::string_size(5, &self.profile_id);
         }
         for value in &self.addresses_ids {
             my_size += ::protobuf::rt::string_size(6, &value);
@@ -2820,8 +2820,8 @@ impl ::protobuf::Message for GetIdentityByIdentifierResponse_Identity {
         if !self.main_identifier.is_empty() {
             os.write_string(4, &self.main_identifier)?;
         }
-        if !self.traits_id.is_empty() {
-            os.write_string(5, &self.traits_id)?;
+        if !self.profile_id.is_empty() {
+            os.write_string(5, &self.profile_id)?;
         }
         for v in &self.addresses_ids {
             os.write_string(6, &v)?;
@@ -2892,9 +2892,9 @@ impl ::protobuf::Message for GetIdentityByIdentifierResponse_Identity {
                 |m: &mut GetIdentityByIdentifierResponse_Identity| { &mut m.main_identifier },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                "traits_id",
-                |m: &GetIdentityByIdentifierResponse_Identity| { &m.traits_id },
-                |m: &mut GetIdentityByIdentifierResponse_Identity| { &mut m.traits_id },
+                "profile_id",
+                |m: &GetIdentityByIdentifierResponse_Identity| { &m.profile_id },
+                |m: &mut GetIdentityByIdentifierResponse_Identity| { &mut m.profile_id },
             ));
             fields.push(::protobuf::reflect::accessor::make_repeated_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                 "addresses_ids",
@@ -2936,7 +2936,7 @@ impl ::protobuf::Clear for GetIdentityByIdentifierResponse_Identity {
         self.created_at.clear();
         self.updated_at.clear();
         self.main_identifier.clear();
-        self.traits_id.clear();
+        self.profile_id.clear();
         self.addresses_ids.clear();
         self.credentials_ids.clear();
         self.schema_id.clear();
@@ -3381,7 +3381,7 @@ pub struct GetIdentitiesByAttributeResponse_Identity {
     pub created_at: ::protobuf::SingularPtrField<::protobuf::well_known_types::Timestamp>,
     pub updated_at: ::protobuf::SingularPtrField<::protobuf::well_known_types::Timestamp>,
     pub main_identifier: ::std::string::String,
-    pub traits_id: ::std::string::String,
+    pub profile_id: ::std::string::String,
     pub addresses_ids: ::protobuf::RepeatedField<::std::string::String>,
     pub credentials_ids: ::std::collections::HashMap<::std::string::String, ::std::string::String>,
     pub schema_id: ::std::string::String,
@@ -3520,30 +3520,30 @@ impl GetIdentitiesByAttributeResponse_Identity {
         ::std::mem::replace(&mut self.main_identifier, ::std::string::String::new())
     }
 
-    // string traits_id = 5;
+    // string profile_id = 5;
 
 
-    pub fn get_traits_id(&self) -> &str {
-        &self.traits_id
+    pub fn get_profile_id(&self) -> &str {
+        &self.profile_id
     }
-    pub fn clear_traits_id(&mut self) {
-        self.traits_id.clear();
+    pub fn clear_profile_id(&mut self) {
+        self.profile_id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_traits_id(&mut self, v: ::std::string::String) {
-        self.traits_id = v;
+    pub fn set_profile_id(&mut self, v: ::std::string::String) {
+        self.profile_id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_traits_id(&mut self) -> &mut ::std::string::String {
-        &mut self.traits_id
+    pub fn mut_profile_id(&mut self) -> &mut ::std::string::String {
+        &mut self.profile_id
     }
 
     // Take field
-    pub fn take_traits_id(&mut self) -> ::std::string::String {
-        ::std::mem::replace(&mut self.traits_id, ::std::string::String::new())
+    pub fn take_profile_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.profile_id, ::std::string::String::new())
     }
 
     // repeated string addresses_ids = 6;
@@ -3670,7 +3670,7 @@ impl ::protobuf::Message for GetIdentitiesByAttributeResponse_Identity {
                     ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.main_identifier)?;
                 },
                 5 => {
-                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.traits_id)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.profile_id)?;
                 },
                 6 => {
                     ::protobuf::rt::read_repeated_string_into(wire_type, is, &mut self.addresses_ids)?;
@@ -3710,8 +3710,8 @@ impl ::protobuf::Message for GetIdentitiesByAttributeResponse_Identity {
         if !self.main_identifier.is_empty() {
             my_size += ::protobuf::rt::string_size(4, &self.main_identifier);
         }
-        if !self.traits_id.is_empty() {
-            my_size += ::protobuf::rt::string_size(5, &self.traits_id);
+        if !self.profile_id.is_empty() {
+            my_size += ::protobuf::rt::string_size(5, &self.profile_id);
         }
         for value in &self.addresses_ids {
             my_size += ::protobuf::rt::string_size(6, &value);
@@ -3745,8 +3745,8 @@ impl ::protobuf::Message for GetIdentitiesByAttributeResponse_Identity {
         if !self.main_identifier.is_empty() {
             os.write_string(4, &self.main_identifier)?;
         }
-        if !self.traits_id.is_empty() {
-            os.write_string(5, &self.traits_id)?;
+        if !self.profile_id.is_empty() {
+            os.write_string(5, &self.profile_id)?;
         }
         for v in &self.addresses_ids {
             os.write_string(6, &v)?;
@@ -3817,9 +3817,9 @@ impl ::protobuf::Message for GetIdentitiesByAttributeResponse_Identity {
                 |m: &mut GetIdentitiesByAttributeResponse_Identity| { &mut m.main_identifier },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                "traits_id",
-                |m: &GetIdentitiesByAttributeResponse_Identity| { &m.traits_id },
-                |m: &mut GetIdentitiesByAttributeResponse_Identity| { &mut m.traits_id },
+                "profile_id",
+                |m: &GetIdentitiesByAttributeResponse_Identity| { &m.profile_id },
+                |m: &mut GetIdentitiesByAttributeResponse_Identity| { &mut m.profile_id },
             ));
             fields.push(::protobuf::reflect::accessor::make_repeated_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                 "addresses_ids",
@@ -3861,7 +3861,7 @@ impl ::protobuf::Clear for GetIdentitiesByAttributeResponse_Identity {
         self.created_at.clear();
         self.updated_at.clear();
         self.main_identifier.clear();
-        self.traits_id.clear();
+        self.profile_id.clear();
         self.addresses_ids.clear();
         self.credentials_ids.clear();
         self.schema_id.clear();
@@ -4884,7 +4884,7 @@ pub struct GetCredentialsResponse_Credential {
     pub updated_at: ::protobuf::SingularPtrField<::protobuf::well_known_types::Timestamp>,
     pub identity_id: ::std::string::String,
     pub field_type: i32,
-    pub name: ::std::string::String,
+    pub connection_id: ::std::string::String,
     pub configured: bool,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
@@ -5035,30 +5035,30 @@ impl GetCredentialsResponse_Credential {
         self.field_type = v;
     }
 
-    // string name = 6;
+    // string connection_id = 6;
 
 
-    pub fn get_name(&self) -> &str {
-        &self.name
+    pub fn get_connection_id(&self) -> &str {
+        &self.connection_id
     }
-    pub fn clear_name(&mut self) {
-        self.name.clear();
+    pub fn clear_connection_id(&mut self) {
+        self.connection_id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_name(&mut self, v: ::std::string::String) {
-        self.name = v;
+    pub fn set_connection_id(&mut self, v: ::std::string::String) {
+        self.connection_id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_name(&mut self) -> &mut ::std::string::String {
-        &mut self.name
+    pub fn mut_connection_id(&mut self) -> &mut ::std::string::String {
+        &mut self.connection_id
     }
 
     // Take field
-    pub fn take_name(&mut self) -> ::std::string::String {
-        ::std::mem::replace(&mut self.name, ::std::string::String::new())
+    pub fn take_connection_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.connection_id, ::std::string::String::new())
     }
 
     // bool configured = 7;
@@ -5116,7 +5116,7 @@ impl ::protobuf::Message for GetCredentialsResponse_Credential {
                     self.field_type = tmp;
                 },
                 6 => {
-                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.name)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.connection_id)?;
                 },
                 7 => {
                     if wire_type != ::protobuf::wire_format::WireTypeVarint {
@@ -5154,8 +5154,8 @@ impl ::protobuf::Message for GetCredentialsResponse_Credential {
         if self.field_type != 0 {
             my_size += ::protobuf::rt::value_size(5, self.field_type, ::protobuf::wire_format::WireTypeVarint);
         }
-        if !self.name.is_empty() {
-            my_size += ::protobuf::rt::string_size(6, &self.name);
+        if !self.connection_id.is_empty() {
+            my_size += ::protobuf::rt::string_size(6, &self.connection_id);
         }
         if self.configured != false {
             my_size += 2;
@@ -5185,8 +5185,8 @@ impl ::protobuf::Message for GetCredentialsResponse_Credential {
         if self.field_type != 0 {
             os.write_int32(5, self.field_type)?;
         }
-        if !self.name.is_empty() {
-            os.write_string(6, &self.name)?;
+        if !self.connection_id.is_empty() {
+            os.write_string(6, &self.connection_id)?;
         }
         if self.configured != false {
             os.write_bool(7, self.configured)?;
@@ -5255,9 +5255,9 @@ impl ::protobuf::Message for GetCredentialsResponse_Credential {
                 |m: &mut GetCredentialsResponse_Credential| { &mut m.field_type },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                "name",
-                |m: &GetCredentialsResponse_Credential| { &m.name },
-                |m: &mut GetCredentialsResponse_Credential| { &mut m.name },
+                "connection_id",
+                |m: &GetCredentialsResponse_Credential| { &m.connection_id },
+                |m: &mut GetCredentialsResponse_Credential| { &mut m.connection_id },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBool>(
                 "configured",
@@ -5285,7 +5285,7 @@ impl ::protobuf::Clear for GetCredentialsResponse_Credential {
         self.updated_at.clear();
         self.identity_id.clear();
         self.field_type = 0;
-        self.name.clear();
+        self.connection_id.clear();
         self.configured = false;
         self.unknown_fields.clear();
     }
@@ -5680,7 +5680,7 @@ impl ::protobuf::reflect::ProtobufValue for UpdateCredentialResponse {
 #[derive(PartialEq,Clone,Default)]
 pub struct CreateConnectionRequest {
     // message fields
-    pub name: ::std::string::String,
+    pub id: ::std::string::String,
     pub client_id: ::std::string::String,
     pub client_secret: ::std::string::String,
     pub button_image_url: ::std::string::String,
@@ -5705,30 +5705,30 @@ impl CreateConnectionRequest {
         ::std::default::Default::default()
     }
 
-    // string name = 1;
+    // string id = 1;
 
 
-    pub fn get_name(&self) -> &str {
-        &self.name
+    pub fn get_id(&self) -> &str {
+        &self.id
     }
-    pub fn clear_name(&mut self) {
-        self.name.clear();
+    pub fn clear_id(&mut self) {
+        self.id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_name(&mut self, v: ::std::string::String) {
-        self.name = v;
+    pub fn set_id(&mut self, v: ::std::string::String) {
+        self.id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_name(&mut self) -> &mut ::std::string::String {
-        &mut self.name
+    pub fn mut_id(&mut self) -> &mut ::std::string::String {
+        &mut self.id
     }
 
     // Take field
-    pub fn take_name(&mut self) -> ::std::string::String {
-        ::std::mem::replace(&mut self.name, ::std::string::String::new())
+    pub fn take_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.id, ::std::string::String::new())
     }
 
     // string client_id = 2;
@@ -5927,7 +5927,7 @@ impl ::protobuf::Message for CreateConnectionRequest {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.name)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.id)?;
                 },
                 2 => {
                     ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.client_id)?;
@@ -5965,8 +5965,8 @@ impl ::protobuf::Message for CreateConnectionRequest {
     #[allow(unused_variables)]
     fn compute_size(&self) -> u32 {
         let mut my_size = 0;
-        if !self.name.is_empty() {
-            my_size += ::protobuf::rt::string_size(1, &self.name);
+        if !self.id.is_empty() {
+            my_size += ::protobuf::rt::string_size(1, &self.id);
         }
         if !self.client_id.is_empty() {
             my_size += ::protobuf::rt::string_size(2, &self.client_id);
@@ -5998,8 +5998,8 @@ impl ::protobuf::Message for CreateConnectionRequest {
     }
 
     fn write_to_with_cached_sizes(&self, os: &mut ::protobuf::CodedOutputStream<'_>) -> ::protobuf::ProtobufResult<()> {
-        if !self.name.is_empty() {
-            os.write_string(1, &self.name)?;
+        if !self.id.is_empty() {
+            os.write_string(1, &self.id)?;
         }
         if !self.client_id.is_empty() {
             os.write_string(2, &self.client_id)?;
@@ -6064,9 +6064,9 @@ impl ::protobuf::Message for CreateConnectionRequest {
         descriptor.get(|| {
             let mut fields = ::std::vec::Vec::new();
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                "name",
-                |m: &CreateConnectionRequest| { &m.name },
-                |m: &mut CreateConnectionRequest| { &mut m.name },
+                "id",
+                |m: &CreateConnectionRequest| { &m.id },
+                |m: &mut CreateConnectionRequest| { &mut m.id },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                 "client_id",
@@ -6124,7 +6124,7 @@ impl ::protobuf::Message for CreateConnectionRequest {
 
 impl ::protobuf::Clear for CreateConnectionRequest {
     fn clear(&mut self) {
-        self.name.clear();
+        self.id.clear();
         self.client_id.clear();
         self.client_secret.clear();
         self.button_image_url.clear();
@@ -6408,7 +6408,7 @@ impl ::protobuf::reflect::ProtobufValue for CreateConnectionRequest_Types {
 #[derive(PartialEq,Clone,Default)]
 pub struct CreateConnectionResponse {
     // message fields
-    pub name: ::std::string::String,
+    pub id: ::std::string::String,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
@@ -6425,30 +6425,30 @@ impl CreateConnectionResponse {
         ::std::default::Default::default()
     }
 
-    // string name = 1;
+    // string id = 1;
 
 
-    pub fn get_name(&self) -> &str {
-        &self.name
+    pub fn get_id(&self) -> &str {
+        &self.id
     }
-    pub fn clear_name(&mut self) {
-        self.name.clear();
+    pub fn clear_id(&mut self) {
+        self.id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_name(&mut self, v: ::std::string::String) {
-        self.name = v;
+    pub fn set_id(&mut self, v: ::std::string::String) {
+        self.id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_name(&mut self) -> &mut ::std::string::String {
-        &mut self.name
+    pub fn mut_id(&mut self) -> &mut ::std::string::String {
+        &mut self.id
     }
 
     // Take field
-    pub fn take_name(&mut self) -> ::std::string::String {
-        ::std::mem::replace(&mut self.name, ::std::string::String::new())
+    pub fn take_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.id, ::std::string::String::new())
     }
 }
 
@@ -6462,7 +6462,7 @@ impl ::protobuf::Message for CreateConnectionResponse {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.name)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.id)?;
                 },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
@@ -6476,8 +6476,8 @@ impl ::protobuf::Message for CreateConnectionResponse {
     #[allow(unused_variables)]
     fn compute_size(&self) -> u32 {
         let mut my_size = 0;
-        if !self.name.is_empty() {
-            my_size += ::protobuf::rt::string_size(1, &self.name);
+        if !self.id.is_empty() {
+            my_size += ::protobuf::rt::string_size(1, &self.id);
         }
         my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
         self.cached_size.set(my_size);
@@ -6485,8 +6485,8 @@ impl ::protobuf::Message for CreateConnectionResponse {
     }
 
     fn write_to_with_cached_sizes(&self, os: &mut ::protobuf::CodedOutputStream<'_>) -> ::protobuf::ProtobufResult<()> {
-        if !self.name.is_empty() {
-            os.write_string(1, &self.name)?;
+        if !self.id.is_empty() {
+            os.write_string(1, &self.id)?;
         }
         os.write_unknown_fields(self.get_unknown_fields())?;
         ::std::result::Result::Ok(())
@@ -6527,9 +6527,9 @@ impl ::protobuf::Message for CreateConnectionResponse {
         descriptor.get(|| {
             let mut fields = ::std::vec::Vec::new();
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                "name",
-                |m: &CreateConnectionResponse| { &m.name },
-                |m: &mut CreateConnectionResponse| { &mut m.name },
+                "id",
+                |m: &CreateConnectionResponse| { &m.id },
+                |m: &mut CreateConnectionResponse| { &mut m.id },
             ));
             ::protobuf::reflect::MessageDescriptor::new_pb_name::<CreateConnectionResponse>(
                 "CreateConnectionResponse",
@@ -6547,7 +6547,7 @@ impl ::protobuf::Message for CreateConnectionResponse {
 
 impl ::protobuf::Clear for CreateConnectionResponse {
     fn clear(&mut self) {
-        self.name.clear();
+        self.id.clear();
         self.unknown_fields.clear();
     }
 }
@@ -6849,7 +6849,7 @@ impl ::protobuf::reflect::ProtobufValue for GetConnectionsResponse {
 #[derive(PartialEq,Clone,Default)]
 pub struct GetConnectionsResponse_Connection {
     // message fields
-    pub name: ::std::string::String,
+    pub id: ::std::string::String,
     pub client_id: ::std::string::String,
     pub client_secret: ::std::string::String,
     pub button_image_url: ::std::string::String,
@@ -6857,7 +6857,6 @@ pub struct GetConnectionsResponse_Connection {
     pub oidc_discovery_url: ::std::string::String,
     pub mfa: ::protobuf::RepeatedField<::std::string::String>,
     pub field_type: GetConnectionsResponse_Types,
-    pub id: ::std::string::String,
     pub scopes: ::std::string::String,
     pub purpose: GetConnectionsResponse_Purposes,
     // special fields
@@ -6876,30 +6875,30 @@ impl GetConnectionsResponse_Connection {
         ::std::default::Default::default()
     }
 
-    // string name = 1;
+    // string id = 1;
 
 
-    pub fn get_name(&self) -> &str {
-        &self.name
+    pub fn get_id(&self) -> &str {
+        &self.id
     }
-    pub fn clear_name(&mut self) {
-        self.name.clear();
+    pub fn clear_id(&mut self) {
+        self.id.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_name(&mut self, v: ::std::string::String) {
-        self.name = v;
+    pub fn set_id(&mut self, v: ::std::string::String) {
+        self.id = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_name(&mut self) -> &mut ::std::string::String {
-        &mut self.name
+    pub fn mut_id(&mut self) -> &mut ::std::string::String {
+        &mut self.id
     }
 
     // Take field
-    pub fn take_name(&mut self) -> ::std::string::String {
-        ::std::mem::replace(&mut self.name, ::std::string::String::new())
+    pub fn take_id(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.id, ::std::string::String::new())
     }
 
     // string client_id = 2;
@@ -7061,33 +7060,7 @@ impl GetConnectionsResponse_Connection {
         self.field_type = v;
     }
 
-    // string id = 10;
-
-
-    pub fn get_id(&self) -> &str {
-        &self.id
-    }
-    pub fn clear_id(&mut self) {
-        self.id.clear();
-    }
-
-    // Param is passed by value, moved
-    pub fn set_id(&mut self, v: ::std::string::String) {
-        self.id = v;
-    }
-
-    // Mutable pointer to the field.
-    // If field is not initialized, it is initialized with default value first.
-    pub fn mut_id(&mut self) -> &mut ::std::string::String {
-        &mut self.id
-    }
-
-    // Take field
-    pub fn take_id(&mut self) -> ::std::string::String {
-        ::std::mem::replace(&mut self.id, ::std::string::String::new())
-    }
-
-    // string scopes = 11;
+    // string scopes = 10;
 
 
     pub fn get_scopes(&self) -> &str {
@@ -7113,7 +7086,7 @@ impl GetConnectionsResponse_Connection {
         ::std::mem::replace(&mut self.scopes, ::std::string::String::new())
     }
 
-    // .depot.devtools.auth.v0.identity.admin.GetConnectionsResponse.Purposes purpose = 12;
+    // .depot.devtools.auth.v0.identity.admin.GetConnectionsResponse.Purposes purpose = 11;
 
 
     pub fn get_purpose(&self) -> GetConnectionsResponse_Purposes {
@@ -7139,7 +7112,7 @@ impl ::protobuf::Message for GetConnectionsResponse_Connection {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.name)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.id)?;
                 },
                 2 => {
                     ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.client_id)?;
@@ -7163,13 +7136,10 @@ impl ::protobuf::Message for GetConnectionsResponse_Connection {
                     ::protobuf::rt::read_proto3_enum_with_unknown_fields_into(wire_type, is, &mut self.field_type, 9, &mut self.unknown_fields)?
                 },
                 10 => {
-                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.id)?;
-                },
-                11 => {
                     ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.scopes)?;
                 },
-                12 => {
-                    ::protobuf::rt::read_proto3_enum_with_unknown_fields_into(wire_type, is, &mut self.purpose, 12, &mut self.unknown_fields)?
+                11 => {
+                    ::protobuf::rt::read_proto3_enum_with_unknown_fields_into(wire_type, is, &mut self.purpose, 11, &mut self.unknown_fields)?
                 },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
@@ -7183,8 +7153,8 @@ impl ::protobuf::Message for GetConnectionsResponse_Connection {
     #[allow(unused_variables)]
     fn compute_size(&self) -> u32 {
         let mut my_size = 0;
-        if !self.name.is_empty() {
-            my_size += ::protobuf::rt::string_size(1, &self.name);
+        if !self.id.is_empty() {
+            my_size += ::protobuf::rt::string_size(1, &self.id);
         }
         if !self.client_id.is_empty() {
             my_size += ::protobuf::rt::string_size(2, &self.client_id);
@@ -7207,14 +7177,11 @@ impl ::protobuf::Message for GetConnectionsResponse_Connection {
         if self.field_type != GetConnectionsResponse_Types::UNSET {
             my_size += ::protobuf::rt::enum_size(9, self.field_type);
         }
-        if !self.id.is_empty() {
-            my_size += ::protobuf::rt::string_size(10, &self.id);
-        }
         if !self.scopes.is_empty() {
-            my_size += ::protobuf::rt::string_size(11, &self.scopes);
+            my_size += ::protobuf::rt::string_size(10, &self.scopes);
         }
         if self.purpose != GetConnectionsResponse_Purposes::PURPOSE_UNKNOWN {
-            my_size += ::protobuf::rt::enum_size(12, self.purpose);
+            my_size += ::protobuf::rt::enum_size(11, self.purpose);
         }
         my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
         self.cached_size.set(my_size);
@@ -7222,8 +7189,8 @@ impl ::protobuf::Message for GetConnectionsResponse_Connection {
     }
 
     fn write_to_with_cached_sizes(&self, os: &mut ::protobuf::CodedOutputStream<'_>) -> ::protobuf::ProtobufResult<()> {
-        if !self.name.is_empty() {
-            os.write_string(1, &self.name)?;
+        if !self.id.is_empty() {
+            os.write_string(1, &self.id)?;
         }
         if !self.client_id.is_empty() {
             os.write_string(2, &self.client_id)?;
@@ -7246,14 +7213,11 @@ impl ::protobuf::Message for GetConnectionsResponse_Connection {
         if self.field_type != GetConnectionsResponse_Types::UNSET {
             os.write_enum(9, ::protobuf::ProtobufEnum::value(&self.field_type))?;
         }
-        if !self.id.is_empty() {
-            os.write_string(10, &self.id)?;
-        }
         if !self.scopes.is_empty() {
-            os.write_string(11, &self.scopes)?;
+            os.write_string(10, &self.scopes)?;
         }
         if self.purpose != GetConnectionsResponse_Purposes::PURPOSE_UNKNOWN {
-            os.write_enum(12, ::protobuf::ProtobufEnum::value(&self.purpose))?;
+            os.write_enum(11, ::protobuf::ProtobufEnum::value(&self.purpose))?;
         }
         os.write_unknown_fields(self.get_unknown_fields())?;
         ::std::result::Result::Ok(())
@@ -7294,9 +7258,9 @@ impl ::protobuf::Message for GetConnectionsResponse_Connection {
         descriptor.get(|| {
             let mut fields = ::std::vec::Vec::new();
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                "name",
-                |m: &GetConnectionsResponse_Connection| { &m.name },
-                |m: &mut GetConnectionsResponse_Connection| { &mut m.name },
+                "id",
+                |m: &GetConnectionsResponse_Connection| { &m.id },
+                |m: &mut GetConnectionsResponse_Connection| { &mut m.id },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                 "client_id",
@@ -7334,11 +7298,6 @@ impl ::protobuf::Message for GetConnectionsResponse_Connection {
                 |m: &mut GetConnectionsResponse_Connection| { &mut m.field_type },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                "id",
-                |m: &GetConnectionsResponse_Connection| { &m.id },
-                |m: &mut GetConnectionsResponse_Connection| { &mut m.id },
-            ));
-            fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                 "scopes",
                 |m: &GetConnectionsResponse_Connection| { &m.scopes },
                 |m: &mut GetConnectionsResponse_Connection| { &mut m.scopes },
@@ -7364,7 +7323,7 @@ impl ::protobuf::Message for GetConnectionsResponse_Connection {
 
 impl ::protobuf::Clear for GetConnectionsResponse_Connection {
     fn clear(&mut self) {
-        self.name.clear();
+        self.id.clear();
         self.client_id.clear();
         self.client_secret.clear();
         self.button_image_url.clear();
@@ -7372,7 +7331,6 @@ impl ::protobuf::Clear for GetConnectionsResponse_Connection {
         self.oidc_discovery_url.clear();
         self.mfa.clear();
         self.field_type = GetConnectionsResponse_Types::UNSET;
-        self.id.clear();
         self.scopes.clear();
         self.purpose = GetConnectionsResponse_Purposes::PURPOSE_UNKNOWN;
         self.unknown_fields.clear();
@@ -15612,7 +15570,7 @@ impl ::protobuf::reflect::ProtobufValue for UpdateAddressResponse {
 }
 
 #[derive(PartialEq,Clone,Default)]
-pub struct GetTraitsRequest {
+pub struct GetProfileRequest {
     // message fields
     pub identity_id: ::std::string::String,
     // special fields
@@ -15620,14 +15578,14 @@ pub struct GetTraitsRequest {
     pub cached_size: ::protobuf::CachedSize,
 }
 
-impl<'a> ::std::default::Default for &'a GetTraitsRequest {
-    fn default() -> &'a GetTraitsRequest {
-        <GetTraitsRequest as ::protobuf::Message>::default_instance()
+impl<'a> ::std::default::Default for &'a GetProfileRequest {
+    fn default() -> &'a GetProfileRequest {
+        <GetProfileRequest as ::protobuf::Message>::default_instance()
     }
 }
 
-impl GetTraitsRequest {
-    pub fn new() -> GetTraitsRequest {
+impl GetProfileRequest {
+    pub fn new() -> GetProfileRequest {
         ::std::default::Default::default()
     }
 
@@ -15658,7 +15616,7 @@ impl GetTraitsRequest {
     }
 }
 
-impl ::protobuf::Message for GetTraitsRequest {
+impl ::protobuf::Message for GetProfileRequest {
     fn is_initialized(&self) -> bool {
         true
     }
@@ -15724,8 +15682,8 @@ impl ::protobuf::Message for GetTraitsRequest {
         Self::descriptor_static()
     }
 
-    fn new() -> GetTraitsRequest {
-        GetTraitsRequest::new()
+    fn new() -> GetProfileRequest {
+        GetProfileRequest::new()
     }
 
     fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
@@ -15734,90 +15692,90 @@ impl ::protobuf::Message for GetTraitsRequest {
             let mut fields = ::std::vec::Vec::new();
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                 "identity_id",
-                |m: &GetTraitsRequest| { &m.identity_id },
-                |m: &mut GetTraitsRequest| { &mut m.identity_id },
+                |m: &GetProfileRequest| { &m.identity_id },
+                |m: &mut GetProfileRequest| { &mut m.identity_id },
             ));
-            ::protobuf::reflect::MessageDescriptor::new_pb_name::<GetTraitsRequest>(
-                "GetTraitsRequest",
+            ::protobuf::reflect::MessageDescriptor::new_pb_name::<GetProfileRequest>(
+                "GetProfileRequest",
                 fields,
                 file_descriptor_proto()
             )
         })
     }
 
-    fn default_instance() -> &'static GetTraitsRequest {
-        static instance: ::protobuf::rt::LazyV2<GetTraitsRequest> = ::protobuf::rt::LazyV2::INIT;
-        instance.get(GetTraitsRequest::new)
+    fn default_instance() -> &'static GetProfileRequest {
+        static instance: ::protobuf::rt::LazyV2<GetProfileRequest> = ::protobuf::rt::LazyV2::INIT;
+        instance.get(GetProfileRequest::new)
     }
 }
 
-impl ::protobuf::Clear for GetTraitsRequest {
+impl ::protobuf::Clear for GetProfileRequest {
     fn clear(&mut self) {
         self.identity_id.clear();
         self.unknown_fields.clear();
     }
 }
 
-impl ::std::fmt::Debug for GetTraitsRequest {
+impl ::std::fmt::Debug for GetProfileRequest {
     fn fmt(&self, f: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
         ::protobuf::text_format::fmt(self, f)
     }
 }
 
-impl ::protobuf::reflect::ProtobufValue for GetTraitsRequest {
+impl ::protobuf::reflect::ProtobufValue for GetProfileRequest {
     fn as_ref(&self) -> ::protobuf::reflect::ReflectValueRef {
         ::protobuf::reflect::ReflectValueRef::Message(self)
     }
 }
 
 #[derive(PartialEq,Clone,Default)]
-pub struct GetTraitsResponse {
+pub struct GetProfileResponse {
     // message fields
-    pub traits: ::std::string::String,
+    pub profile: ::std::string::String,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
 }
 
-impl<'a> ::std::default::Default for &'a GetTraitsResponse {
-    fn default() -> &'a GetTraitsResponse {
-        <GetTraitsResponse as ::protobuf::Message>::default_instance()
+impl<'a> ::std::default::Default for &'a GetProfileResponse {
+    fn default() -> &'a GetProfileResponse {
+        <GetProfileResponse as ::protobuf::Message>::default_instance()
     }
 }
 
-impl GetTraitsResponse {
-    pub fn new() -> GetTraitsResponse {
+impl GetProfileResponse {
+    pub fn new() -> GetProfileResponse {
         ::std::default::Default::default()
     }
 
-    // string traits = 1;
+    // string profile = 1;
 
 
-    pub fn get_traits(&self) -> &str {
-        &self.traits
+    pub fn get_profile(&self) -> &str {
+        &self.profile
     }
-    pub fn clear_traits(&mut self) {
-        self.traits.clear();
+    pub fn clear_profile(&mut self) {
+        self.profile.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_traits(&mut self, v: ::std::string::String) {
-        self.traits = v;
+    pub fn set_profile(&mut self, v: ::std::string::String) {
+        self.profile = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_traits(&mut self) -> &mut ::std::string::String {
-        &mut self.traits
+    pub fn mut_profile(&mut self) -> &mut ::std::string::String {
+        &mut self.profile
     }
 
     // Take field
-    pub fn take_traits(&mut self) -> ::std::string::String {
-        ::std::mem::replace(&mut self.traits, ::std::string::String::new())
+    pub fn take_profile(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.profile, ::std::string::String::new())
     }
 }
 
-impl ::protobuf::Message for GetTraitsResponse {
+impl ::protobuf::Message for GetProfileResponse {
     fn is_initialized(&self) -> bool {
         true
     }
@@ -15827,7 +15785,7 @@ impl ::protobuf::Message for GetTraitsResponse {
             let (field_number, wire_type) = is.read_tag_unpack()?;
             match field_number {
                 1 => {
-                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.traits)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.profile)?;
                 },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
@@ -15841,8 +15799,8 @@ impl ::protobuf::Message for GetTraitsResponse {
     #[allow(unused_variables)]
     fn compute_size(&self) -> u32 {
         let mut my_size = 0;
-        if !self.traits.is_empty() {
-            my_size += ::protobuf::rt::string_size(1, &self.traits);
+        if !self.profile.is_empty() {
+            my_size += ::protobuf::rt::string_size(1, &self.profile);
         }
         my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
         self.cached_size.set(my_size);
@@ -15850,8 +15808,8 @@ impl ::protobuf::Message for GetTraitsResponse {
     }
 
     fn write_to_with_cached_sizes(&self, os: &mut ::protobuf::CodedOutputStream<'_>) -> ::protobuf::ProtobufResult<()> {
-        if !self.traits.is_empty() {
-            os.write_string(1, &self.traits)?;
+        if !self.profile.is_empty() {
+            os.write_string(1, &self.profile)?;
         }
         os.write_unknown_fields(self.get_unknown_fields())?;
         ::std::result::Result::Ok(())
@@ -15883,8 +15841,8 @@ impl ::protobuf::Message for GetTraitsResponse {
         Self::descriptor_static()
     }
 
-    fn new() -> GetTraitsResponse {
-        GetTraitsResponse::new()
+    fn new() -> GetProfileResponse {
+        GetProfileResponse::new()
     }
 
     fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
@@ -15892,61 +15850,61 @@ impl ::protobuf::Message for GetTraitsResponse {
         descriptor.get(|| {
             let mut fields = ::std::vec::Vec::new();
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                "traits",
-                |m: &GetTraitsResponse| { &m.traits },
-                |m: &mut GetTraitsResponse| { &mut m.traits },
+                "profile",
+                |m: &GetProfileResponse| { &m.profile },
+                |m: &mut GetProfileResponse| { &mut m.profile },
             ));
-            ::protobuf::reflect::MessageDescriptor::new_pb_name::<GetTraitsResponse>(
-                "GetTraitsResponse",
+            ::protobuf::reflect::MessageDescriptor::new_pb_name::<GetProfileResponse>(
+                "GetProfileResponse",
                 fields,
                 file_descriptor_proto()
             )
         })
     }
 
-    fn default_instance() -> &'static GetTraitsResponse {
-        static instance: ::protobuf::rt::LazyV2<GetTraitsResponse> = ::protobuf::rt::LazyV2::INIT;
-        instance.get(GetTraitsResponse::new)
+    fn default_instance() -> &'static GetProfileResponse {
+        static instance: ::protobuf::rt::LazyV2<GetProfileResponse> = ::protobuf::rt::LazyV2::INIT;
+        instance.get(GetProfileResponse::new)
     }
 }
 
-impl ::protobuf::Clear for GetTraitsResponse {
+impl ::protobuf::Clear for GetProfileResponse {
     fn clear(&mut self) {
-        self.traits.clear();
+        self.profile.clear();
         self.unknown_fields.clear();
     }
 }
 
-impl ::std::fmt::Debug for GetTraitsResponse {
+impl ::std::fmt::Debug for GetProfileResponse {
     fn fmt(&self, f: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
         ::protobuf::text_format::fmt(self, f)
     }
 }
 
-impl ::protobuf::reflect::ProtobufValue for GetTraitsResponse {
+impl ::protobuf::reflect::ProtobufValue for GetProfileResponse {
     fn as_ref(&self) -> ::protobuf::reflect::ReflectValueRef {
         ::protobuf::reflect::ReflectValueRef::Message(self)
     }
 }
 
 #[derive(PartialEq,Clone,Default)]
-pub struct UpdateTraitsRequest {
+pub struct UpdateProfileRequest {
     // message fields
     pub identity_id: ::std::string::String,
-    pub traits: ::std::string::String,
+    pub profile: ::std::string::String,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
 }
 
-impl<'a> ::std::default::Default for &'a UpdateTraitsRequest {
-    fn default() -> &'a UpdateTraitsRequest {
-        <UpdateTraitsRequest as ::protobuf::Message>::default_instance()
+impl<'a> ::std::default::Default for &'a UpdateProfileRequest {
+    fn default() -> &'a UpdateProfileRequest {
+        <UpdateProfileRequest as ::protobuf::Message>::default_instance()
     }
 }
 
-impl UpdateTraitsRequest {
-    pub fn new() -> UpdateTraitsRequest {
+impl UpdateProfileRequest {
+    pub fn new() -> UpdateProfileRequest {
         ::std::default::Default::default()
     }
 
@@ -15976,34 +15934,34 @@ impl UpdateTraitsRequest {
         ::std::mem::replace(&mut self.identity_id, ::std::string::String::new())
     }
 
-    // string traits = 2;
+    // string profile = 2;
 
 
-    pub fn get_traits(&self) -> &str {
-        &self.traits
+    pub fn get_profile(&self) -> &str {
+        &self.profile
     }
-    pub fn clear_traits(&mut self) {
-        self.traits.clear();
+    pub fn clear_profile(&mut self) {
+        self.profile.clear();
     }
 
     // Param is passed by value, moved
-    pub fn set_traits(&mut self, v: ::std::string::String) {
-        self.traits = v;
+    pub fn set_profile(&mut self, v: ::std::string::String) {
+        self.profile = v;
     }
 
     // Mutable pointer to the field.
     // If field is not initialized, it is initialized with default value first.
-    pub fn mut_traits(&mut self) -> &mut ::std::string::String {
-        &mut self.traits
+    pub fn mut_profile(&mut self) -> &mut ::std::string::String {
+        &mut self.profile
     }
 
     // Take field
-    pub fn take_traits(&mut self) -> ::std::string::String {
-        ::std::mem::replace(&mut self.traits, ::std::string::String::new())
+    pub fn take_profile(&mut self) -> ::std::string::String {
+        ::std::mem::replace(&mut self.profile, ::std::string::String::new())
     }
 }
 
-impl ::protobuf::Message for UpdateTraitsRequest {
+impl ::protobuf::Message for UpdateProfileRequest {
     fn is_initialized(&self) -> bool {
         true
     }
@@ -16016,7 +15974,7 @@ impl ::protobuf::Message for UpdateTraitsRequest {
                     ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.identity_id)?;
                 },
                 2 => {
-                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.traits)?;
+                    ::protobuf::rt::read_singular_proto3_string_into(wire_type, is, &mut self.profile)?;
                 },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
@@ -16033,8 +15991,8 @@ impl ::protobuf::Message for UpdateTraitsRequest {
         if !self.identity_id.is_empty() {
             my_size += ::protobuf::rt::string_size(1, &self.identity_id);
         }
-        if !self.traits.is_empty() {
-            my_size += ::protobuf::rt::string_size(2, &self.traits);
+        if !self.profile.is_empty() {
+            my_size += ::protobuf::rt::string_size(2, &self.profile);
         }
         my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
         self.cached_size.set(my_size);
@@ -16045,8 +16003,8 @@ impl ::protobuf::Message for UpdateTraitsRequest {
         if !self.identity_id.is_empty() {
             os.write_string(1, &self.identity_id)?;
         }
-        if !self.traits.is_empty() {
-            os.write_string(2, &self.traits)?;
+        if !self.profile.is_empty() {
+            os.write_string(2, &self.profile)?;
         }
         os.write_unknown_fields(self.get_unknown_fields())?;
         ::std::result::Result::Ok(())
@@ -16078,8 +16036,8 @@ impl ::protobuf::Message for UpdateTraitsRequest {
         Self::descriptor_static()
     }
 
-    fn new() -> UpdateTraitsRequest {
-        UpdateTraitsRequest::new()
+    fn new() -> UpdateProfileRequest {
+        UpdateProfileRequest::new()
     }
 
     fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
@@ -16088,68 +16046,68 @@ impl ::protobuf::Message for UpdateTraitsRequest {
             let mut fields = ::std::vec::Vec::new();
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
                 "identity_id",
-                |m: &UpdateTraitsRequest| { &m.identity_id },
-                |m: &mut UpdateTraitsRequest| { &mut m.identity_id },
+                |m: &UpdateProfileRequest| { &m.identity_id },
+                |m: &mut UpdateProfileRequest| { &mut m.identity_id },
             ));
             fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                "traits",
-                |m: &UpdateTraitsRequest| { &m.traits },
-                |m: &mut UpdateTraitsRequest| { &mut m.traits },
+                "profile",
+                |m: &UpdateProfileRequest| { &m.profile },
+                |m: &mut UpdateProfileRequest| { &mut m.profile },
             ));
-            ::protobuf::reflect::MessageDescriptor::new_pb_name::<UpdateTraitsRequest>(
-                "UpdateTraitsRequest",
+            ::protobuf::reflect::MessageDescriptor::new_pb_name::<UpdateProfileRequest>(
+                "UpdateProfileRequest",
                 fields,
                 file_descriptor_proto()
             )
         })
     }
 
-    fn default_instance() -> &'static UpdateTraitsRequest {
-        static instance: ::protobuf::rt::LazyV2<UpdateTraitsRequest> = ::protobuf::rt::LazyV2::INIT;
-        instance.get(UpdateTraitsRequest::new)
+    fn default_instance() -> &'static UpdateProfileRequest {
+        static instance: ::protobuf::rt::LazyV2<UpdateProfileRequest> = ::protobuf::rt::LazyV2::INIT;
+        instance.get(UpdateProfileRequest::new)
     }
 }
 
-impl ::protobuf::Clear for UpdateTraitsRequest {
+impl ::protobuf::Clear for UpdateProfileRequest {
     fn clear(&mut self) {
         self.identity_id.clear();
-        self.traits.clear();
+        self.profile.clear();
         self.unknown_fields.clear();
     }
 }
 
-impl ::std::fmt::Debug for UpdateTraitsRequest {
+impl ::std::fmt::Debug for UpdateProfileRequest {
     fn fmt(&self, f: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
         ::protobuf::text_format::fmt(self, f)
     }
 }
 
-impl ::protobuf::reflect::ProtobufValue for UpdateTraitsRequest {
+impl ::protobuf::reflect::ProtobufValue for UpdateProfileRequest {
     fn as_ref(&self) -> ::protobuf::reflect::ReflectValueRef {
         ::protobuf::reflect::ReflectValueRef::Message(self)
     }
 }
 
 #[derive(PartialEq,Clone,Default)]
-pub struct UpdateTraitsResponse {
+pub struct UpdateProfileResponse {
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
 }
 
-impl<'a> ::std::default::Default for &'a UpdateTraitsResponse {
-    fn default() -> &'a UpdateTraitsResponse {
-        <UpdateTraitsResponse as ::protobuf::Message>::default_instance()
+impl<'a> ::std::default::Default for &'a UpdateProfileResponse {
+    fn default() -> &'a UpdateProfileResponse {
+        <UpdateProfileResponse as ::protobuf::Message>::default_instance()
     }
 }
 
-impl UpdateTraitsResponse {
-    pub fn new() -> UpdateTraitsResponse {
+impl UpdateProfileResponse {
+    pub fn new() -> UpdateProfileResponse {
         ::std::default::Default::default()
     }
 }
 
-impl ::protobuf::Message for UpdateTraitsResponse {
+impl ::protobuf::Message for UpdateProfileResponse {
     fn is_initialized(&self) -> bool {
         true
     }
@@ -16206,41 +16164,41 @@ impl ::protobuf::Message for UpdateTraitsResponse {
         Self::descriptor_static()
     }
 
-    fn new() -> UpdateTraitsResponse {
-        UpdateTraitsResponse::new()
+    fn new() -> UpdateProfileResponse {
+        UpdateProfileResponse::new()
     }
 
     fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
         static descriptor: ::protobuf::rt::LazyV2<::protobuf::reflect::MessageDescriptor> = ::protobuf::rt::LazyV2::INIT;
         descriptor.get(|| {
             let fields = ::std::vec::Vec::new();
-            ::protobuf::reflect::MessageDescriptor::new_pb_name::<UpdateTraitsResponse>(
-                "UpdateTraitsResponse",
+            ::protobuf::reflect::MessageDescriptor::new_pb_name::<UpdateProfileResponse>(
+                "UpdateProfileResponse",
                 fields,
                 file_descriptor_proto()
             )
         })
     }
 
-    fn default_instance() -> &'static UpdateTraitsResponse {
-        static instance: ::protobuf::rt::LazyV2<UpdateTraitsResponse> = ::protobuf::rt::LazyV2::INIT;
-        instance.get(UpdateTraitsResponse::new)
+    fn default_instance() -> &'static UpdateProfileResponse {
+        static instance: ::protobuf::rt::LazyV2<UpdateProfileResponse> = ::protobuf::rt::LazyV2::INIT;
+        instance.get(UpdateProfileResponse::new)
     }
 }
 
-impl ::protobuf::Clear for UpdateTraitsResponse {
+impl ::protobuf::Clear for UpdateProfileResponse {
     fn clear(&mut self) {
         self.unknown_fields.clear();
     }
 }
 
-impl ::std::fmt::Debug for UpdateTraitsResponse {
+impl ::std::fmt::Debug for UpdateProfileResponse {
     fn fmt(&self, f: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
         ::protobuf::text_format::fmt(self, f)
     }
 }
 
-impl ::protobuf::reflect::ProtobufValue for UpdateTraitsResponse {
+impl ::protobuf::reflect::ProtobufValue for UpdateProfileResponse {
     fn as_ref(&self) -> ::protobuf::reflect::ReflectValueRef {
         ::protobuf::reflect::ReflectValueRef::Message(self)
     }
@@ -23339,12 +23297,12 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \x20\x01(\x0e2A.depot.devtools.auth.v0.identity.admin.GetIdentitiesRespo\
     nse.LockR\x04lock\"&\n\x04Lock\x12\x0c\n\x08UNLOCKED\x10\0\x12\x10\n\x0c\
     ADMIN_LOCKED\x10\x01\"5\n\x12GetIdentityRequest\x12\x1f\n\x0bidentity_id\
-    \x18\x02\x20\x01(\tR\nidentityId\"\xed\x04\n\x13GetIdentityResponse\x12\
+    \x18\x02\x20\x01(\tR\nidentityId\"\xef\x04\n\x13GetIdentityResponse\x12\
     \x1f\n\x0bidentity_id\x18\x01\x20\x01(\tR\nidentityId\x129\n\ncreated_at\
     \x18\x02\x20\x01(\x0b2\x1a.google.protobuf.TimestampR\tcreatedAt\x129\n\
     \nupdated_at\x18\x03\x20\x01(\x0b2\x1a.google.protobuf.TimestampR\tupdat\
     edAt\x12'\n\x0fmain_identifier\x18\x04\x20\x01(\tR\x0emainIdentifier\x12\
-    \x1b\n\ttraits_id\x18\x05\x20\x01(\tR\x08traitsId\x12#\n\raddresses_ids\
+    \x1d\n\nprofile_id\x18\x05\x20\x01(\tR\tprofileId\x12#\n\raddresses_ids\
     \x18\x06\x20\x03(\tR\x0caddressesIds\x12w\n\x0fcredentials_ids\x18\x07\
     \x20\x03(\x0b2N.depot.devtools.auth.v0.identity.admin.GetIdentityRespons\
     e.CredentialsIdsEntryR\x0ecredentialsIds\x12\x1b\n\tschema_id\x18\x08\
@@ -23355,15 +23313,15 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \x08UNLOCKED\x10\0\x12\x10\n\x0cADMIN_LOCKED\x10\x01\"y\n\x1eGetIdentity\
     ByIdentifierRequest\x12\x1c\n\tattribute\x18\x01\x20\x01(\tR\tattribute\
     \x12\x14\n\x05value\x18\x02\x20\x01(\tR\x05value\x12#\n\rconnection_id\
-    \x18\x03\x20\x01(\tR\x0cconnectionId\"\x9e\x06\n\x1fGetIdentityByIdentif\
+    \x18\x03\x20\x01(\tR\x0cconnectionId\"\xa0\x06\n\x1fGetIdentityByIdentif\
     ierResponse\x12k\n\x08identity\x18\x01\x20\x01(\x0b2O.depot.devtools.aut\
     h.v0.identity.admin.GetIdentityByIdentifierResponse.IdentityR\x08identit\
-    y\x1a\x8d\x05\n\x08Identity\x12\x1f\n\x0bidentity_id\x18\x01\x20\x01(\tR\
+    y\x1a\x8f\x05\n\x08Identity\x12\x1f\n\x0bidentity_id\x18\x01\x20\x01(\tR\
     \nidentityId\x129\n\ncreated_at\x18\x02\x20\x01(\x0b2\x1a.google.protobu\
     f.TimestampR\tcreatedAt\x129\n\nupdated_at\x18\x03\x20\x01(\x0b2\x1a.goo\
     gle.protobuf.TimestampR\tupdatedAt\x12'\n\x0fmain_identifier\x18\x04\x20\
-    \x01(\tR\x0emainIdentifier\x12\x1b\n\ttraits_id\x18\x05\x20\x01(\tR\x08t\
-    raitsId\x12#\n\raddresses_ids\x18\x06\x20\x03(\tR\x0caddressesIds\x12\
+    \x01(\tR\x0emainIdentifier\x12\x1d\n\nprofile_id\x18\x05\x20\x01(\tR\tpr\
+    ofileId\x12#\n\raddresses_ids\x18\x06\x20\x03(\tR\x0caddressesIds\x12\
     \x8c\x01\n\x0fcredentials_ids\x18\x07\x20\x03(\x0b2c.depot.devtools.auth\
     .v0.identity.admin.GetIdentityByIdentifierResponse.Identity.CredentialsI\
     dsEntryR\x0ecredentialsIds\x12\x1b\n\tschema_id\x18\x08\x20\x01(\tR\x08s\
@@ -23373,21 +23331,21 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \x14\n\x05value\x18\x02\x20\x01(\tR\x05value:\x028\x01\"&\n\x04Lock\x12\
     \x0c\n\x08UNLOCKED\x10\0\x12\x10\n\x0cADMIN_LOCKED\x10\x01\"U\n\x1fGetId\
     entitiesByAttributeRequest\x12\x1c\n\tattribute\x18\x01\x20\x01(\tR\tatt\
-    ribute\x12\x14\n\x05value\x18\x02\x20\x01(\tR\x05value\"\xa6\x06\n\x20Ge\
+    ribute\x12\x14\n\x05value\x18\x02\x20\x01(\tR\x05value\"\xa8\x06\n\x20Ge\
     tIdentitiesByAttributeResponse\x12p\n\nidentities\x18\x01\x20\x03(\x0b2P\
     .depot.devtools.auth.v0.identity.admin.GetIdentitiesByAttributeResponse.\
-    IdentityR\nidentities\x1a\x8f\x05\n\x08Identity\x12\x1f\n\x0bidentity_id\
+    IdentityR\nidentities\x1a\x91\x05\n\x08Identity\x12\x1f\n\x0bidentity_id\
     \x18\x01\x20\x01(\tR\nidentityId\x129\n\ncreated_at\x18\x02\x20\x01(\x0b\
     2\x1a.google.protobuf.TimestampR\tcreatedAt\x129\n\nupdated_at\x18\x03\
     \x20\x01(\x0b2\x1a.google.protobuf.TimestampR\tupdatedAt\x12'\n\x0fmain_\
-    identifier\x18\x04\x20\x01(\tR\x0emainIdentifier\x12\x1b\n\ttraits_id\
-    \x18\x05\x20\x01(\tR\x08traitsId\x12#\n\raddresses_ids\x18\x06\x20\x03(\
-    \tR\x0caddressesIds\x12\x8d\x01\n\x0fcredentials_ids\x18\x07\x20\x03(\
-    \x0b2d.depot.devtools.auth.v0.identity.admin.GetIdentitiesByAttributeRes\
-    ponse.Identity.CredentialsIdsEntryR\x0ecredentialsIds\x12\x1b\n\tschema_\
-    id\x18\x08\x20\x01(\tR\x08schemaId\x12i\n\x04lock\x18\t\x20\x01(\x0e2U.d\
-    epot.devtools.auth.v0.identity.admin.GetIdentitiesByAttributeResponse.Id\
-    entity.LockR\x04lock\x1aA\n\x13CredentialsIdsEntry\x12\x10\n\x03key\x18\
+    identifier\x18\x04\x20\x01(\tR\x0emainIdentifier\x12\x1d\n\nprofile_id\
+    \x18\x05\x20\x01(\tR\tprofileId\x12#\n\raddresses_ids\x18\x06\x20\x03(\t\
+    R\x0caddressesIds\x12\x8d\x01\n\x0fcredentials_ids\x18\x07\x20\x03(\x0b2\
+    d.depot.devtools.auth.v0.identity.admin.GetIdentitiesByAttributeResponse\
+    .Identity.CredentialsIdsEntryR\x0ecredentialsIds\x12\x1b\n\tschema_id\
+    \x18\x08\x20\x01(\tR\x08schemaId\x12i\n\x04lock\x18\t\x20\x01(\x0e2U.dep\
+    ot.devtools.auth.v0.identity.admin.GetIdentitiesByAttributeResponse.Iden\
+    tity.LockR\x04lock\x1aA\n\x13CredentialsIdsEntry\x12\x10\n\x03key\x18\
     \x01\x20\x01(\tR\x03key\x12\x14\n\x05value\x18\x02\x20\x01(\tR\x05value:\
     \x028\x01\"&\n\x04Lock\x12\x0c\n\x08UNLOCKED\x10\0\x12\x10\n\x0cADMIN_LO\
     CKED\x10\x01\"\xb7\x01\n\x15UpdateIdentityRequest\x12\x1f\n\x0bidentity_\
@@ -23397,39 +23355,75 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \x10\x01\"\x18\n\x16UpdateIdentityResponse\"8\n\x15DeleteIdentityRequest\
     \x12\x1f\n\x0bidentity_id\x18\x01\x20\x01(\tR\nidentityId\"\x18\n\x16Del\
     eteIdentityResponse\"8\n\x15GetCredentialsRequest\x12\x1f\n\x0bidentity_\
-    id\x18\x01\x20\x01(\tR\nidentityId\"\xa8\x04\n\x16GetCredentialsResponse\
+    id\x18\x01\x20\x01(\tR\nidentityId\"\xb9\x04\n\x16GetCredentialsResponse\
     \x12p\n\x0bcredentials\x18\x01\x20\x03(\x0b2N.depot.devtools.auth.v0.ide\
     ntity.admin.GetCredentialsResponse.CredentialsEntryR\x0bcredentials\x1a\
-    \x90\x02\n\nCredential\x12#\n\rcredential_id\x18\x01\x20\x01(\tR\x0ccred\
+    \xa1\x02\n\nCredential\x12#\n\rcredential_id\x18\x01\x20\x01(\tR\x0ccred\
     entialId\x129\n\ncreated_at\x18\x02\x20\x01(\x0b2\x1a.google.protobuf.Ti\
     mestampR\tcreatedAt\x129\n\nupdated_at\x18\x03\x20\x01(\x0b2\x1a.google.\
     protobuf.TimestampR\tupdatedAt\x12\x1f\n\x0bidentity_id\x18\x04\x20\x01(\
-    \tR\nidentityId\x12\x12\n\x04type\x18\x05\x20\x01(\x05R\x04type\x12\x12\
-    \n\x04name\x18\x06\x20\x01(\tR\x04name\x12\x1e\n\nconfigured\x18\x07\x20\
-    \x01(\x08R\nconfigured\x1a\x88\x01\n\x10CredentialsEntry\x12\x10\n\x03ke\
-    y\x18\x01\x20\x01(\tR\x03key\x12^\n\x05value\x18\x02\x20\x01(\x0b2H.depo\
-    t.devtools.auth.v0.identity.admin.GetCredentialsResponse.CredentialR\x05\
-    value:\x028\x01\"\x8c\x01\n\x17UpdateCredentialRequest\x12+\n\x04data\
-    \x18\x01\x20\x01(\x0b2\x17.google.protobuf.StructR\x04data\x12#\n\rconne\
-    ction_id\x18\x02\x20\x01(\tR\x0cconnectionId\x12\x1f\n\x0bidentity_id\
-    \x18\x03\x20\x01(\tR\nidentityId\"\x1a\n\x18UpdateCredentialResponse\"\
-    \x86\t\n\x17CreateConnectionRequest\x12\x12\n\x04name\x18\x01\x20\x01(\t\
-    R\x04name\x12\x1b\n\tclient_id\x18\x02\x20\x01(\tR\x08clientId\x12#\n\rc\
-    lient_secret\x18\x03\x20\x01(\tR\x0cclientSecret\x12(\n\x10button_image_\
-    url\x18\x04\x20\x01(\tR\x0ebuttonImageUrl\x12d\n\x08provider\x18\x06\x20\
-    \x01(\x0e2H.depot.devtools.auth.v0.identity.admin.CreateConnectionReques\
-    t.ProvidersR\x08provider\x12,\n\x12oidc_discovery_url\x18\x07\x20\x01(\t\
-    R\x10oidcDiscoveryUrl\x12\x10\n\x03mfa\x18\x08\x20\x03(\tR\x03mfa\x12X\n\
-    \x04type\x18\t\x20\x01(\x0e2D.depot.devtools.auth.v0.identity.admin.Crea\
-    teConnectionRequest.TypesR\x04type\x12\x16\n\x06scopes\x18\n\x20\x01(\tR\
-    \x06scopes\"\x93\x05\n\tProviders\x12\x08\n\x04NONE\x10\0\x12\n\n\x06OPE\
-    NID\x10\x01\x12\n\n\x06AMAZON\x10\x02\x12\r\n\tBITBUCKET\x10\x03\x12\x07\
-    \n\x03BOX\x10\x04\x12\x0f\n\x0bDAILYMOTION\x10\x05\x12\n\n\x06DEEZER\x10\
-    \x06\x12\x10\n\x0cDIGITALOCEAN\x10\x07\x12\x0b\n\x07DISCORD\x10\x08\x12\
-    \x0b\n\x07DROPBOX\x10\t\x12\r\n\tEVEONLINE\x10\n\x12\x0c\n\x08FACEBOOK\
-    \x10\x0b\x12\n\n\x06FITBIT\x10\x0c\x12\t\n\x05GITEA\x10\r\x12\n\n\x06GIT\
-    HUB\x10\x0e\x12\n\n\x06GITLAB\x10\x0f\x12\n\n\x06GOOGLE\x10\x10\x12\x0b\
-    \n\x07SHOPIFY\x10\x12\x12\x0e\n\nSOUNDCLOUD\x10\x13\x12\x0b\n\x07SPOTIFY\
+    \tR\nidentityId\x12\x12\n\x04type\x18\x05\x20\x01(\x05R\x04type\x12#\n\r\
+    connection_id\x18\x06\x20\x01(\tR\x0cconnectionId\x12\x1e\n\nconfigured\
+    \x18\x07\x20\x01(\x08R\nconfigured\x1a\x88\x01\n\x10CredentialsEntry\x12\
+    \x10\n\x03key\x18\x01\x20\x01(\tR\x03key\x12^\n\x05value\x18\x02\x20\x01\
+    (\x0b2H.depot.devtools.auth.v0.identity.admin.GetCredentialsResponse.Cre\
+    dentialR\x05value:\x028\x01\"\x8c\x01\n\x17UpdateCredentialRequest\x12+\
+    \n\x04data\x18\x01\x20\x01(\x0b2\x17.google.protobuf.StructR\x04data\x12\
+    #\n\rconnection_id\x18\x02\x20\x01(\tR\x0cconnectionId\x12\x1f\n\x0biden\
+    tity_id\x18\x03\x20\x01(\tR\nidentityId\"\x1a\n\x18UpdateCredentialRespo\
+    nse\"\x82\t\n\x17CreateConnectionRequest\x12\x0e\n\x02id\x18\x01\x20\x01\
+    (\tR\x02id\x12\x1b\n\tclient_id\x18\x02\x20\x01(\tR\x08clientId\x12#\n\r\
+    client_secret\x18\x03\x20\x01(\tR\x0cclientSecret\x12(\n\x10button_image\
+    _url\x18\x04\x20\x01(\tR\x0ebuttonImageUrl\x12d\n\x08provider\x18\x06\
+    \x20\x01(\x0e2H.depot.devtools.auth.v0.identity.admin.CreateConnectionRe\
+    quest.ProvidersR\x08provider\x12,\n\x12oidc_discovery_url\x18\x07\x20\
+    \x01(\tR\x10oidcDiscoveryUrl\x12\x10\n\x03mfa\x18\x08\x20\x03(\tR\x03mfa\
+    \x12X\n\x04type\x18\t\x20\x01(\x0e2D.depot.devtools.auth.v0.identity.adm\
+    in.CreateConnectionRequest.TypesR\x04type\x12\x16\n\x06scopes\x18\n\x20\
+    \x01(\tR\x06scopes\"\x93\x05\n\tProviders\x12\x08\n\x04NONE\x10\0\x12\n\
+    \n\x06OPENID\x10\x01\x12\n\n\x06AMAZON\x10\x02\x12\r\n\tBITBUCKET\x10\
+    \x03\x12\x07\n\x03BOX\x10\x04\x12\x0f\n\x0bDAILYMOTION\x10\x05\x12\n\n\
+    \x06DEEZER\x10\x06\x12\x10\n\x0cDIGITALOCEAN\x10\x07\x12\x0b\n\x07DISCOR\
+    D\x10\x08\x12\x0b\n\x07DROPBOX\x10\t\x12\r\n\tEVEONLINE\x10\n\x12\x0c\n\
+    \x08FACEBOOK\x10\x0b\x12\n\n\x06FITBIT\x10\x0c\x12\t\n\x05GITEA\x10\r\
+    \x12\n\n\x06GITHUB\x10\x0e\x12\n\n\x06GITLAB\x10\x0f\x12\n\n\x06GOOGLE\
+    \x10\x10\x12\x0b\n\x07SHOPIFY\x10\x12\x12\x0e\n\nSOUNDCLOUD\x10\x13\x12\
+    \x0b\n\x07SPOTIFY\x10\x14\x12\t\n\x05STEAM\x10\x15\x12\n\n\x06STRIPE\x10\
+    \x16\x12\n\n\x06TWITCH\x10\x17\x12\x08\n\x04UBER\x10\x18\x12\t\n\x05WEPA\
+    Y\x10\x19\x12\t\n\x05YAHOO\x10\x1a\x12\n\n\x06YAMMER\x10\x1b\x12\n\n\x06\
+    HEROKU\x10\x1c\x12\r\n\tINSTAGRAM\x10\x1d\x12\x0c\n\x08INTERCOM\x10\x1e\
+    \x12\t\n\x05KAKAO\x10\x1f\x12\n\n\x06LASTFM\x10\x20\x12\x0c\n\x08LINKEDI\
+    N\x10!\x12\x08\n\x04LINE\x10\"\x12\x0c\n\x08ONEDRIVE\x10#\x12\x0b\n\x07A\
+    ZUREAD\x10$\x12\x13\n\x0fMICROSOFTONLINE\x10%\x12\r\n\tBATTLENET\x10&\
+    \x12\n\n\x06PAYPAL\x10'\x12\x0b\n\x07TWITTER\x10(\x12\x0e\n\nSALESFORCE\
+    \x10)\x12\x0c\n\x08TYPETALK\x10*\x12\t\n\x05SLACK\x10+\x12\n\n\x06MEETUP\
+    \x10,\x12\x08\n\x04XERO\x10.\x12\x06\n\x02VK\x10/\x12\t\n\x05NAVER\x100\
+    \x12\n\n\x06YANDEX\x101\x12\r\n\tNEXTCLOUD\x102\x12\t\n\x05APPLE\x104\
+    \x12\n\n\x06STRAVA\x105\"=\n\x05Types\x12\t\n\x05UNSET\x10\0\x12\x0c\n\
+    \x08PASSWORD\x10\x01\x12\x07\n\x03OTP\x10\x02\x12\x08\n\x04TOTP\x10\x03\
+    \x12\x08\n\x04OIDC\x10\x04\"*\n\x18CreateConnectionResponse\x12\x0e\n\
+    \x02id\x18\x01\x20\x01(\tR\x02id\"\x17\n\x15GetConnectionsRequest\"\xb1\
+    \x0b\n\x16GetConnectionsResponse\x12j\n\x0bconnections\x18\x01\x20\x03(\
+    \x0b2H.depot.devtools.auth.v0.identity.admin.GetConnectionsResponse.Conn\
+    ectionR\x0bconnections\x1a\x80\x04\n\nConnection\x12\x0e\n\x02id\x18\x01\
+    \x20\x01(\tR\x02id\x12\x1b\n\tclient_id\x18\x02\x20\x01(\tR\x08clientId\
+    \x12#\n\rclient_secret\x18\x03\x20\x01(\tR\x0cclientSecret\x12(\n\x10but\
+    ton_image_url\x18\x04\x20\x01(\tR\x0ebuttonImageUrl\x12c\n\x08provider\
+    \x18\x06\x20\x01(\x0e2G.depot.devtools.auth.v0.identity.admin.GetConnect\
+    ionsResponse.ProvidersR\x08provider\x12,\n\x12oidc_discovery_url\x18\x07\
+    \x20\x01(\tR\x10oidcDiscoveryUrl\x12\x10\n\x03mfa\x18\x08\x20\x03(\tR\
+    \x03mfa\x12W\n\x04type\x18\t\x20\x01(\x0e2C.depot.devtools.auth.v0.ident\
+    ity.admin.GetConnectionsResponse.TypesR\x04type\x12\x16\n\x06scopes\x18\
+    \n\x20\x01(\tR\x06scopes\x12`\n\x07purpose\x18\x0b\x20\x01(\x0e2F.depot.\
+    devtools.auth.v0.identity.admin.GetConnectionsResponse.PurposesR\x07purp\
+    ose\"\x93\x05\n\tProviders\x12\x08\n\x04NONE\x10\0\x12\n\n\x06OPENID\x10\
+    \x01\x12\n\n\x06AMAZON\x10\x02\x12\r\n\tBITBUCKET\x10\x03\x12\x07\n\x03B\
+    OX\x10\x04\x12\x0f\n\x0bDAILYMOTION\x10\x05\x12\n\n\x06DEEZER\x10\x06\
+    \x12\x10\n\x0cDIGITALOCEAN\x10\x07\x12\x0b\n\x07DISCORD\x10\x08\x12\x0b\
+    \n\x07DROPBOX\x10\t\x12\r\n\tEVEONLINE\x10\n\x12\x0c\n\x08FACEBOOK\x10\
+    \x0b\x12\n\n\x06FITBIT\x10\x0c\x12\t\n\x05GITEA\x10\r\x12\n\n\x06GITHUB\
+    \x10\x0e\x12\n\n\x06GITLAB\x10\x0f\x12\n\n\x06GOOGLE\x10\x10\x12\x0b\n\
+    \x07SHOPIFY\x10\x12\x12\x0e\n\nSOUNDCLOUD\x10\x13\x12\x0b\n\x07SPOTIFY\
     \x10\x14\x12\t\n\x05STEAM\x10\x15\x12\n\n\x06STRIPE\x10\x16\x12\n\n\x06T\
     WITCH\x10\x17\x12\x08\n\x04UBER\x10\x18\x12\t\n\x05WEPAY\x10\x19\x12\t\n\
     \x05YAHOO\x10\x1a\x12\n\n\x06YAMMER\x10\x1b\x12\n\n\x06HEROKU\x10\x1c\
@@ -23443,424 +23437,388 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     EX\x101\x12\r\n\tNEXTCLOUD\x102\x12\t\n\x05APPLE\x104\x12\n\n\x06STRAVA\
     \x105\"=\n\x05Types\x12\t\n\x05UNSET\x10\0\x12\x0c\n\x08PASSWORD\x10\x01\
     \x12\x07\n\x03OTP\x10\x02\x12\x08\n\x04TOTP\x10\x03\x12\x08\n\x04OIDC\
-    \x10\x04\".\n\x18CreateConnectionResponse\x12\x12\n\x04name\x18\x01\x20\
-    \x01(\tR\x04name\"\x17\n\x15GetConnectionsRequest\"\xc5\x0b\n\x16GetConn\
-    ectionsResponse\x12j\n\x0bconnections\x18\x01\x20\x03(\x0b2H.depot.devto\
-    ols.auth.v0.identity.admin.GetConnectionsResponse.ConnectionR\x0bconnect\
-    ions\x1a\x94\x04\n\nConnection\x12\x12\n\x04name\x18\x01\x20\x01(\tR\x04\
-    name\x12\x1b\n\tclient_id\x18\x02\x20\x01(\tR\x08clientId\x12#\n\rclient\
-    _secret\x18\x03\x20\x01(\tR\x0cclientSecret\x12(\n\x10button_image_url\
-    \x18\x04\x20\x01(\tR\x0ebuttonImageUrl\x12c\n\x08provider\x18\x06\x20\
-    \x01(\x0e2G.depot.devtools.auth.v0.identity.admin.GetConnectionsResponse\
-    .ProvidersR\x08provider\x12,\n\x12oidc_discovery_url\x18\x07\x20\x01(\tR\
-    \x10oidcDiscoveryUrl\x12\x10\n\x03mfa\x18\x08\x20\x03(\tR\x03mfa\x12W\n\
-    \x04type\x18\t\x20\x01(\x0e2C.depot.devtools.auth.v0.identity.admin.GetC\
-    onnectionsResponse.TypesR\x04type\x12\x0e\n\x02id\x18\n\x20\x01(\tR\x02i\
-    d\x12\x16\n\x06scopes\x18\x0b\x20\x01(\tR\x06scopes\x12`\n\x07purpose\
-    \x18\x0c\x20\x01(\x0e2F.depot.devtools.auth.v0.identity.admin.GetConnect\
-    ionsResponse.PurposesR\x07purpose\"\x93\x05\n\tProviders\x12\x08\n\x04NO\
-    NE\x10\0\x12\n\n\x06OPENID\x10\x01\x12\n\n\x06AMAZON\x10\x02\x12\r\n\tBI\
-    TBUCKET\x10\x03\x12\x07\n\x03BOX\x10\x04\x12\x0f\n\x0bDAILYMOTION\x10\
-    \x05\x12\n\n\x06DEEZER\x10\x06\x12\x10\n\x0cDIGITALOCEAN\x10\x07\x12\x0b\
-    \n\x07DISCORD\x10\x08\x12\x0b\n\x07DROPBOX\x10\t\x12\r\n\tEVEONLINE\x10\
-    \n\x12\x0c\n\x08FACEBOOK\x10\x0b\x12\n\n\x06FITBIT\x10\x0c\x12\t\n\x05GI\
-    TEA\x10\r\x12\n\n\x06GITHUB\x10\x0e\x12\n\n\x06GITLAB\x10\x0f\x12\n\n\
-    \x06GOOGLE\x10\x10\x12\x0b\n\x07SHOPIFY\x10\x12\x12\x0e\n\nSOUNDCLOUD\
-    \x10\x13\x12\x0b\n\x07SPOTIFY\x10\x14\x12\t\n\x05STEAM\x10\x15\x12\n\n\
-    \x06STRIPE\x10\x16\x12\n\n\x06TWITCH\x10\x17\x12\x08\n\x04UBER\x10\x18\
-    \x12\t\n\x05WEPAY\x10\x19\x12\t\n\x05YAHOO\x10\x1a\x12\n\n\x06YAMMER\x10\
-    \x1b\x12\n\n\x06HEROKU\x10\x1c\x12\r\n\tINSTAGRAM\x10\x1d\x12\x0c\n\x08I\
-    NTERCOM\x10\x1e\x12\t\n\x05KAKAO\x10\x1f\x12\n\n\x06LASTFM\x10\x20\x12\
-    \x0c\n\x08LINKEDIN\x10!\x12\x08\n\x04LINE\x10\"\x12\x0c\n\x08ONEDRIVE\
-    \x10#\x12\x0b\n\x07AZUREAD\x10$\x12\x13\n\x0fMICROSOFTONLINE\x10%\x12\r\
-    \n\tBATTLENET\x10&\x12\n\n\x06PAYPAL\x10'\x12\x0b\n\x07TWITTER\x10(\x12\
-    \x0e\n\nSALESFORCE\x10)\x12\x0c\n\x08TYPETALK\x10*\x12\t\n\x05SLACK\x10+\
-    \x12\n\n\x06MEETUP\x10,\x12\x08\n\x04XERO\x10.\x12\x06\n\x02VK\x10/\x12\
-    \t\n\x05NAVER\x100\x12\n\n\x06YANDEX\x101\x12\r\n\tNEXTCLOUD\x102\x12\t\
-    \n\x05APPLE\x104\x12\n\n\x06STRAVA\x105\"=\n\x05Types\x12\t\n\x05UNSET\
-    \x10\0\x12\x0c\n\x08PASSWORD\x10\x01\x12\x07\n\x03OTP\x10\x02\x12\x08\n\
-    \x04TOTP\x10\x03\x12\x08\n\x04OIDC\x10\x04\"S\n\x08Purposes\x12\x13\n\
-    \x0fPURPOSE_UNKNOWN\x10\0\x12\x17\n\x13PURPOSE_MAIN_FACTOR\x10\x01\x12\
-    \x19\n\x15PURPOSE_SECOND_FACTOR\x10\x02\"\x88\t\n\x17UpdateConnectionReq\
-    uest\x12\x1b\n\tclient_id\x18\x02\x20\x01(\tR\x08clientId\x12#\n\rclient\
-    _secret\x18\x03\x20\x01(\tR\x0cclientSecret\x12(\n\x10button_image_url\
-    \x18\x04\x20\x01(\tR\x0ebuttonImageUrl\x12d\n\x08provider\x18\x06\x20\
-    \x01(\x0e2H.depot.devtools.auth.v0.identity.admin.UpdateConnectionReques\
-    t.ProvidersR\x08provider\x12,\n\x12oidc_discovery_url\x18\x07\x20\x01(\t\
-    R\x10oidcDiscoveryUrl\x12\x10\n\x03mfa\x18\x08\x20\x03(\tR\x03mfa\x12X\n\
-    \x04type\x18\t\x20\x01(\x0e2D.depot.devtools.auth.v0.identity.admin.Upda\
-    teConnectionRequest.TypesR\x04type\x12\x0e\n\x02id\x18\n\x20\x01(\tR\x02\
-    id\x12\x16\n\x06scopes\x18\x0b\x20\x01(\tR\x06scopes\"\x93\x05\n\tProvid\
-    ers\x12\x08\n\x04NONE\x10\0\x12\n\n\x06OPENID\x10\x01\x12\n\n\x06AMAZON\
-    \x10\x02\x12\r\n\tBITBUCKET\x10\x03\x12\x07\n\x03BOX\x10\x04\x12\x0f\n\
-    \x0bDAILYMOTION\x10\x05\x12\n\n\x06DEEZER\x10\x06\x12\x10\n\x0cDIGITALOC\
-    EAN\x10\x07\x12\x0b\n\x07DISCORD\x10\x08\x12\x0b\n\x07DROPBOX\x10\t\x12\
-    \r\n\tEVEONLINE\x10\n\x12\x0c\n\x08FACEBOOK\x10\x0b\x12\n\n\x06FITBIT\
-    \x10\x0c\x12\t\n\x05GITEA\x10\r\x12\n\n\x06GITHUB\x10\x0e\x12\n\n\x06GIT\
-    LAB\x10\x0f\x12\n\n\x06GOOGLE\x10\x10\x12\x0b\n\x07SHOPIFY\x10\x12\x12\
-    \x0e\n\nSOUNDCLOUD\x10\x13\x12\x0b\n\x07SPOTIFY\x10\x14\x12\t\n\x05STEAM\
-    \x10\x15\x12\n\n\x06STRIPE\x10\x16\x12\n\n\x06TWITCH\x10\x17\x12\x08\n\
-    \x04UBER\x10\x18\x12\t\n\x05WEPAY\x10\x19\x12\t\n\x05YAHOO\x10\x1a\x12\n\
-    \n\x06YAMMER\x10\x1b\x12\n\n\x06HEROKU\x10\x1c\x12\r\n\tINSTAGRAM\x10\
-    \x1d\x12\x0c\n\x08INTERCOM\x10\x1e\x12\t\n\x05KAKAO\x10\x1f\x12\n\n\x06L\
-    ASTFM\x10\x20\x12\x0c\n\x08LINKEDIN\x10!\x12\x08\n\x04LINE\x10\"\x12\x0c\
-    \n\x08ONEDRIVE\x10#\x12\x0b\n\x07AZUREAD\x10$\x12\x13\n\x0fMICROSOFTONLI\
-    NE\x10%\x12\r\n\tBATTLENET\x10&\x12\n\n\x06PAYPAL\x10'\x12\x0b\n\x07TWIT\
-    TER\x10(\x12\x0e\n\nSALESFORCE\x10)\x12\x0c\n\x08TYPETALK\x10*\x12\t\n\
-    \x05SLACK\x10+\x12\n\n\x06MEETUP\x10,\x12\x08\n\x04XERO\x10.\x12\x06\n\
-    \x02VK\x10/\x12\t\n\x05NAVER\x100\x12\n\n\x06YANDEX\x101\x12\r\n\tNEXTCL\
-    OUD\x102\x12\t\n\x05APPLE\x104\x12\n\n\x06STRAVA\x105\"=\n\x05Types\x12\
-    \t\n\x05UNSET\x10\0\x12\x0c\n\x08PASSWORD\x10\x01\x12\x07\n\x03OTP\x10\
-    \x02\x12\x08\n\x04TOTP\x10\x03\x12\x08\n\x04OIDC\x10\x04J\x04\x08\x01\
-    \x10\x02\"\x1a\n\x18UpdateConnectionResponse\")\n\x17DeleteConnectionReq\
-    uest\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\"\x1a\n\x18DeleteConnecti\
-    onResponse\"\x19\n\x17GetOAuth2ClientsRequest\"\xa1\x10\n\x18GetOAuth2Cl\
-    ientsResponse\x12`\n\x07clients\x18\x01\x20\x03(\x0b2F.depot.devtools.au\
-    th.v0.identity.admin.GetOAuth2ClientsResponse.ClientR\x07clients\x1a\xa2\
-    \x0f\n\x06Client\x120\n\x14allowed_cors_origins\x18\x01\x20\x03(\tR\x12a\
-    llowedCorsOrigins\x12\x1a\n\x08audience\x18\x02\x20\x03(\tR\x08audience\
-    \x12M\n#backchannel_logout_session_required\x18\x03\x20\x01(\x08R\x20bac\
-    kchannelLogoutSessionRequired\x124\n\x16backchannel_logout_uri\x18\x04\
-    \x20\x01(\tR\x14backchannelLogoutUri\x12\x1b\n\tclient_id\x18\x05\x20\
-    \x01(\tR\x08clientId\x12\x1f\n\x0bclient_name\x18\x06\x20\x01(\tR\nclien\
-    tName\x127\n\x18client_secret_expires_at\x18\x07\x20\x01(\x03R\x15client\
-    SecretExpiresAt\x12\x1d\n\nclient_uri\x18\x08\x20\x01(\tR\tclientUri\x12\
-    \x1a\n\x08contacts\x18\t\x20\x03(\tR\x08contacts\x129\n\ncreated_at\x18\
-    \n\x20\x01(\x0b2\x1a.google.protobuf.TimestampR\tcreatedAt\x12O\n$frontc\
-    hannel_logout_session_required\x18\x0b\x20\x01(\x08R!frontchannelLogoutS\
-    essionRequired\x126\n\x17frontchannel_logout_uri\x18\x0c\x20\x01(\tR\x15\
-    frontchannelLogoutUri\x12Q\n\x0bgrant_types\x18\r\x20\x03(\x0e20.depot.d\
-    evtools.auth.v0.identity.admin.GrantTypeR\ngrantTypes\x12+\n\x04jwks\x18\
-    \x0e\x20\x01(\x0b2\x17.google.protobuf.StructR\x04jwks\x12\x19\n\x08jwks\
-    _uri\x18\x0f\x20\x01(\tR\x07jwksUri\x12\x19\n\x08logo_uri\x18\x10\x20\
-    \x01(\tR\x07logoUri\x123\n\x08metadata\x18\x11\x20\x01(\x0b2\x17.google.\
-    protobuf.StructR\x08metadata\x12\x14\n\x05owner\x18\x12\x20\x01(\tR\x05o\
-    wner\x12\x1d\n\npolicy_uri\x18\x13\x20\x01(\tR\tpolicyUri\x129\n\x19post\
-    _logout_redirect_uris\x18\x14\x20\x03(\tR\x16postLogoutRedirectUris\x12#\
-    \n\rredirect_uris\x18\x15\x20\x03(\tR\x0credirectUris\x12{\n\x1arequest_\
-    object_signing_alg\x18\x16\x20\x01(\x0e2>.depot.devtools.auth.v0.identit\
-    y.admin.RequestObjectSigningAlgR\x17requestObjectSigningAlg\x12!\n\x0cre\
-    quest_uris\x18\x17\x20\x03(\tR\x0brequestUris\x12Z\n\x0eresponse_types\
-    \x18\x18\x20\x03(\x0e23.depot.devtools.auth.v0.identity.admin.ResponseTy\
-    peR\rresponseTypes\x12\x14\n\x05scope\x18\x19\x20\x01(\tR\x05scope\x122\
-    \n\x15sector_identifier_uri\x18\x1a\x20\x01(\tR\x13sectorIdentifierUri\
-    \x12U\n\x0csubject_type\x18\x1b\x20\x01(\x0e22.depot.devtools.auth.v0.id\
-    entity.admin.SubjectTypeR\x0bsubjectType\x12{\n\x1atoken_endpoint_auth_m\
-    ethod\x18\x1c\x20\x01(\x0e2>.depot.devtools.auth.v0.identity.admin.Token\
-    EndpointAuthMethodR\x17tokenEndpointAuthMethod\x12\x88\x01\n\x1ftoken_en\
-    dpoint_auth_signing_alg\x18\x1d\x20\x01(\x0e2B.depot.devtools.auth.v0.id\
-    entity.admin.TokenEndpointAuthSigningAlgR\x1btokenEndpointAuthSigningAlg\
-    \x12\x17\n\x07tos_uri\x18\x1e\x20\x01(\tR\x06tosUri\x129\n\nupdated_at\
-    \x18\x1f\x20\x01(\x0b2\x1a.google.protobuf.TimestampR\tupdatedAt\x12\x81\
-    \x01\n\x1cuserinfo_signed_response_alg\x18\x20\x20\x01(\x0e2@.depot.devt\
+    \x10\x04\"S\n\x08Purposes\x12\x13\n\x0fPURPOSE_UNKNOWN\x10\0\x12\x17\n\
+    \x13PURPOSE_MAIN_FACTOR\x10\x01\x12\x19\n\x15PURPOSE_SECOND_FACTOR\x10\
+    \x02\"\x88\t\n\x17UpdateConnectionRequest\x12\x1b\n\tclient_id\x18\x02\
+    \x20\x01(\tR\x08clientId\x12#\n\rclient_secret\x18\x03\x20\x01(\tR\x0ccl\
+    ientSecret\x12(\n\x10button_image_url\x18\x04\x20\x01(\tR\x0ebuttonImage\
+    Url\x12d\n\x08provider\x18\x06\x20\x01(\x0e2H.depot.devtools.auth.v0.ide\
+    ntity.admin.UpdateConnectionRequest.ProvidersR\x08provider\x12,\n\x12oid\
+    c_discovery_url\x18\x07\x20\x01(\tR\x10oidcDiscoveryUrl\x12\x10\n\x03mfa\
+    \x18\x08\x20\x03(\tR\x03mfa\x12X\n\x04type\x18\t\x20\x01(\x0e2D.depot.de\
+    vtools.auth.v0.identity.admin.UpdateConnectionRequest.TypesR\x04type\x12\
+    \x0e\n\x02id\x18\n\x20\x01(\tR\x02id\x12\x16\n\x06scopes\x18\x0b\x20\x01\
+    (\tR\x06scopes\"\x93\x05\n\tProviders\x12\x08\n\x04NONE\x10\0\x12\n\n\
+    \x06OPENID\x10\x01\x12\n\n\x06AMAZON\x10\x02\x12\r\n\tBITBUCKET\x10\x03\
+    \x12\x07\n\x03BOX\x10\x04\x12\x0f\n\x0bDAILYMOTION\x10\x05\x12\n\n\x06DE\
+    EZER\x10\x06\x12\x10\n\x0cDIGITALOCEAN\x10\x07\x12\x0b\n\x07DISCORD\x10\
+    \x08\x12\x0b\n\x07DROPBOX\x10\t\x12\r\n\tEVEONLINE\x10\n\x12\x0c\n\x08FA\
+    CEBOOK\x10\x0b\x12\n\n\x06FITBIT\x10\x0c\x12\t\n\x05GITEA\x10\r\x12\n\n\
+    \x06GITHUB\x10\x0e\x12\n\n\x06GITLAB\x10\x0f\x12\n\n\x06GOOGLE\x10\x10\
+    \x12\x0b\n\x07SHOPIFY\x10\x12\x12\x0e\n\nSOUNDCLOUD\x10\x13\x12\x0b\n\
+    \x07SPOTIFY\x10\x14\x12\t\n\x05STEAM\x10\x15\x12\n\n\x06STRIPE\x10\x16\
+    \x12\n\n\x06TWITCH\x10\x17\x12\x08\n\x04UBER\x10\x18\x12\t\n\x05WEPAY\
+    \x10\x19\x12\t\n\x05YAHOO\x10\x1a\x12\n\n\x06YAMMER\x10\x1b\x12\n\n\x06H\
+    EROKU\x10\x1c\x12\r\n\tINSTAGRAM\x10\x1d\x12\x0c\n\x08INTERCOM\x10\x1e\
+    \x12\t\n\x05KAKAO\x10\x1f\x12\n\n\x06LASTFM\x10\x20\x12\x0c\n\x08LINKEDI\
+    N\x10!\x12\x08\n\x04LINE\x10\"\x12\x0c\n\x08ONEDRIVE\x10#\x12\x0b\n\x07A\
+    ZUREAD\x10$\x12\x13\n\x0fMICROSOFTONLINE\x10%\x12\r\n\tBATTLENET\x10&\
+    \x12\n\n\x06PAYPAL\x10'\x12\x0b\n\x07TWITTER\x10(\x12\x0e\n\nSALESFORCE\
+    \x10)\x12\x0c\n\x08TYPETALK\x10*\x12\t\n\x05SLACK\x10+\x12\n\n\x06MEETUP\
+    \x10,\x12\x08\n\x04XERO\x10.\x12\x06\n\x02VK\x10/\x12\t\n\x05NAVER\x100\
+    \x12\n\n\x06YANDEX\x101\x12\r\n\tNEXTCLOUD\x102\x12\t\n\x05APPLE\x104\
+    \x12\n\n\x06STRAVA\x105\"=\n\x05Types\x12\t\n\x05UNSET\x10\0\x12\x0c\n\
+    \x08PASSWORD\x10\x01\x12\x07\n\x03OTP\x10\x02\x12\x08\n\x04TOTP\x10\x03\
+    \x12\x08\n\x04OIDC\x10\x04J\x04\x08\x01\x10\x02\"\x1a\n\x18UpdateConnect\
+    ionResponse\")\n\x17DeleteConnectionRequest\x12\x0e\n\x02id\x18\x01\x20\
+    \x01(\tR\x02id\"\x1a\n\x18DeleteConnectionResponse\"\x19\n\x17GetOAuth2C\
+    lientsRequest\"\xa1\x10\n\x18GetOAuth2ClientsResponse\x12`\n\x07clients\
+    \x18\x01\x20\x03(\x0b2F.depot.devtools.auth.v0.identity.admin.GetOAuth2C\
+    lientsResponse.ClientR\x07clients\x1a\xa2\x0f\n\x06Client\x120\n\x14allo\
+    wed_cors_origins\x18\x01\x20\x03(\tR\x12allowedCorsOrigins\x12\x1a\n\x08\
+    audience\x18\x02\x20\x03(\tR\x08audience\x12M\n#backchannel_logout_sessi\
+    on_required\x18\x03\x20\x01(\x08R\x20backchannelLogoutSessionRequired\
+    \x124\n\x16backchannel_logout_uri\x18\x04\x20\x01(\tR\x14backchannelLogo\
+    utUri\x12\x1b\n\tclient_id\x18\x05\x20\x01(\tR\x08clientId\x12\x1f\n\x0b\
+    client_name\x18\x06\x20\x01(\tR\nclientName\x127\n\x18client_secret_expi\
+    res_at\x18\x07\x20\x01(\x03R\x15clientSecretExpiresAt\x12\x1d\n\nclient_\
+    uri\x18\x08\x20\x01(\tR\tclientUri\x12\x1a\n\x08contacts\x18\t\x20\x03(\
+    \tR\x08contacts\x129\n\ncreated_at\x18\n\x20\x01(\x0b2\x1a.google.protob\
+    uf.TimestampR\tcreatedAt\x12O\n$frontchannel_logout_session_required\x18\
+    \x0b\x20\x01(\x08R!frontchannelLogoutSessionRequired\x126\n\x17frontchan\
+    nel_logout_uri\x18\x0c\x20\x01(\tR\x15frontchannelLogoutUri\x12Q\n\x0bgr\
+    ant_types\x18\r\x20\x03(\x0e20.depot.devtools.auth.v0.identity.admin.Gra\
+    ntTypeR\ngrantTypes\x12+\n\x04jwks\x18\x0e\x20\x01(\x0b2\x17.google.prot\
+    obuf.StructR\x04jwks\x12\x19\n\x08jwks_uri\x18\x0f\x20\x01(\tR\x07jwksUr\
+    i\x12\x19\n\x08logo_uri\x18\x10\x20\x01(\tR\x07logoUri\x123\n\x08metadat\
+    a\x18\x11\x20\x01(\x0b2\x17.google.protobuf.StructR\x08metadata\x12\x14\
+    \n\x05owner\x18\x12\x20\x01(\tR\x05owner\x12\x1d\n\npolicy_uri\x18\x13\
+    \x20\x01(\tR\tpolicyUri\x129\n\x19post_logout_redirect_uris\x18\x14\x20\
+    \x03(\tR\x16postLogoutRedirectUris\x12#\n\rredirect_uris\x18\x15\x20\x03\
+    (\tR\x0credirectUris\x12{\n\x1arequest_object_signing_alg\x18\x16\x20\
+    \x01(\x0e2>.depot.devtools.auth.v0.identity.admin.RequestObjectSigningAl\
+    gR\x17requestObjectSigningAlg\x12!\n\x0crequest_uris\x18\x17\x20\x03(\tR\
+    \x0brequestUris\x12Z\n\x0eresponse_types\x18\x18\x20\x03(\x0e23.depot.de\
+    vtools.auth.v0.identity.admin.ResponseTypeR\rresponseTypes\x12\x14\n\x05\
+    scope\x18\x19\x20\x01(\tR\x05scope\x122\n\x15sector_identifier_uri\x18\
+    \x1a\x20\x01(\tR\x13sectorIdentifierUri\x12U\n\x0csubject_type\x18\x1b\
+    \x20\x01(\x0e22.depot.devtools.auth.v0.identity.admin.SubjectTypeR\x0bsu\
+    bjectType\x12{\n\x1atoken_endpoint_auth_method\x18\x1c\x20\x01(\x0e2>.de\
+    pot.devtools.auth.v0.identity.admin.TokenEndpointAuthMethodR\x17tokenEnd\
+    pointAuthMethod\x12\x88\x01\n\x1ftoken_endpoint_auth_signing_alg\x18\x1d\
+    \x20\x01(\x0e2B.depot.devtools.auth.v0.identity.admin.TokenEndpointAuthS\
+    igningAlgR\x1btokenEndpointAuthSigningAlg\x12\x17\n\x07tos_uri\x18\x1e\
+    \x20\x01(\tR\x06tosUri\x129\n\nupdated_at\x18\x1f\x20\x01(\x0b2\x1a.goog\
+    le.protobuf.TimestampR\tupdatedAt\x12\x81\x01\n\x1cuserinfo_signed_respo\
+    nse_alg\x18\x20\x20\x01(\x0e2@.depot.devtools.auth.v0.identity.admin.Use\
+    rinfoSignedResponseAlgR\x19userinfoSignedResponseAlg\x12R\n\x0bclient_ty\
+    pe\x18!\x20\x01(\x0e21.depot.devtools.auth.v0.identity.admin.ClientTypeR\
+    \nclientType\"\x8e\x0e\n\x19CreateOAuth2ClientRequest\x120\n\x14allowed_\
+    cors_origins\x18\x01\x20\x03(\tR\x12allowedCorsOrigins\x12\x1a\n\x08audi\
+    ence\x18\x02\x20\x03(\tR\x08audience\x12M\n#backchannel_logout_session_r\
+    equired\x18\x03\x20\x01(\x08R\x20backchannelLogoutSessionRequired\x124\n\
+    \x16backchannel_logout_uri\x18\x04\x20\x01(\tR\x14backchannelLogoutUri\
+    \x12\x1f\n\x0bclient_name\x18\x06\x20\x01(\tR\nclientName\x12\x1d\n\ncli\
+    ent_uri\x18\x08\x20\x01(\tR\tclientUri\x12\x1a\n\x08contacts\x18\t\x20\
+    \x03(\tR\x08contacts\x12O\n$frontchannel_logout_session_required\x18\x0b\
+    \x20\x01(\x08R!frontchannelLogoutSessionRequired\x126\n\x17frontchannel_\
+    logout_uri\x18\x0c\x20\x01(\tR\x15frontchannelLogoutUri\x12Q\n\x0bgrant_\
+    types\x18\r\x20\x03(\x0e20.depot.devtools.auth.v0.identity.admin.GrantTy\
+    peR\ngrantTypes\x12+\n\x04jwks\x18\x0e\x20\x01(\x0b2\x17.google.protobuf\
+    .StructR\x04jwks\x12\x19\n\x08jwks_uri\x18\x0f\x20\x01(\tR\x07jwksUri\
+    \x12\x19\n\x08logo_uri\x18\x10\x20\x01(\tR\x07logoUri\x123\n\x08metadata\
+    \x18\x11\x20\x01(\x0b2\x17.google.protobuf.StructR\x08metadata\x12\x14\n\
+    \x05owner\x18\x12\x20\x01(\tR\x05owner\x12\x1d\n\npolicy_uri\x18\x13\x20\
+    \x01(\tR\tpolicyUri\x129\n\x19post_logout_redirect_uris\x18\x14\x20\x03(\
+    \tR\x16postLogoutRedirectUris\x12#\n\rredirect_uris\x18\x15\x20\x03(\tR\
+    \x0credirectUris\x12{\n\x1arequest_object_signing_alg\x18\x16\x20\x01(\
+    \x0e2>.depot.devtools.auth.v0.identity.admin.RequestObjectSigningAlgR\
+    \x17requestObjectSigningAlg\x12!\n\x0crequest_uris\x18\x17\x20\x03(\tR\
+    \x0brequestUris\x12Z\n\x0eresponse_types\x18\x18\x20\x03(\x0e23.depot.de\
+    vtools.auth.v0.identity.admin.ResponseTypeR\rresponseTypes\x12\x14\n\x05\
+    scope\x18\x19\x20\x01(\tR\x05scope\x122\n\x15sector_identifier_uri\x18\
+    \x1a\x20\x01(\tR\x13sectorIdentifierUri\x12U\n\x0csubject_type\x18\x1b\
+    \x20\x01(\x0e22.depot.devtools.auth.v0.identity.admin.SubjectTypeR\x0bsu\
+    bjectType\x12{\n\x1atoken_endpoint_auth_method\x18\x1c\x20\x01(\x0e2>.de\
+    pot.devtools.auth.v0.identity.admin.TokenEndpointAuthMethodR\x17tokenEnd\
+    pointAuthMethod\x12\x88\x01\n\x1ftoken_endpoint_auth_signing_alg\x18\x1d\
+    \x20\x01(\x0e2B.depot.devtools.auth.v0.identity.admin.TokenEndpointAuthS\
+    igningAlgR\x1btokenEndpointAuthSigningAlg\x12\x17\n\x07tos_uri\x18\x1e\
+    \x20\x01(\tR\x06tosUri\x12\x81\x01\n\x1cuserinfo_signed_response_alg\x18\
+    \x1f\x20\x01(\x0e2@.depot.devtools.auth.v0.identity.admin.UserinfoSigned\
+    ResponseAlgR\x19userinfoSignedResponseAlg\x12#\n\rclient_secret\x18\x20\
+    \x20\x01(\tR\x0cclientSecret\x12R\n\x0bclient_type\x18!\x20\x01(\x0e21.d\
+    epot.devtools.auth.v0.identity.admin.ClientTypeR\nclientType\"^\n\x1aCre\
+    ateOAuth2ClientResponse\x12\x1b\n\tclient_id\x18\x01\x20\x01(\tR\x08clie\
+    ntId\x12#\n\rclient_secret\x18\x02\x20\x01(\tR\x0cclientSecret\"\xd7\r\n\
+    \x19UpdateOAuth2ClientRequest\x120\n\x14allowed_cors_origins\x18\x01\x20\
+    \x03(\tR\x12allowedCorsOrigins\x12\x1a\n\x08audience\x18\x02\x20\x03(\tR\
+    \x08audience\x12M\n#backchannel_logout_session_required\x18\x03\x20\x01(\
+    \x08R\x20backchannelLogoutSessionRequired\x124\n\x16backchannel_logout_u\
+    ri\x18\x04\x20\x01(\tR\x14backchannelLogoutUri\x12\x1f\n\x0bclient_name\
+    \x18\x06\x20\x01(\tR\nclientName\x12\x1d\n\nclient_uri\x18\x08\x20\x01(\
+    \tR\tclientUri\x12\x1a\n\x08contacts\x18\t\x20\x03(\tR\x08contacts\x12O\
+    \n$frontchannel_logout_session_required\x18\x0b\x20\x01(\x08R!frontchann\
+    elLogoutSessionRequired\x126\n\x17frontchannel_logout_uri\x18\x0c\x20\
+    \x01(\tR\x15frontchannelLogoutUri\x12Q\n\x0bgrant_types\x18\r\x20\x03(\
+    \x0e20.depot.devtools.auth.v0.identity.admin.GrantTypeR\ngrantTypes\x12+\
+    \n\x04jwks\x18\x0e\x20\x01(\x0b2\x17.google.protobuf.StructR\x04jwks\x12\
+    \x19\n\x08jwks_uri\x18\x0f\x20\x01(\tR\x07jwksUri\x12\x19\n\x08logo_uri\
+    \x18\x10\x20\x01(\tR\x07logoUri\x123\n\x08metadata\x18\x11\x20\x01(\x0b2\
+    \x17.google.protobuf.StructR\x08metadata\x12\x14\n\x05owner\x18\x12\x20\
+    \x01(\tR\x05owner\x12\x1d\n\npolicy_uri\x18\x13\x20\x01(\tR\tpolicyUri\
+    \x129\n\x19post_logout_redirect_uris\x18\x14\x20\x03(\tR\x16postLogoutRe\
+    directUris\x12#\n\rredirect_uris\x18\x15\x20\x03(\tR\x0credirectUris\x12\
+    {\n\x1arequest_object_signing_alg\x18\x16\x20\x01(\x0e2>.depot.devtools.\
+    auth.v0.identity.admin.RequestObjectSigningAlgR\x17requestObjectSigningA\
+    lg\x12!\n\x0crequest_uris\x18\x17\x20\x03(\tR\x0brequestUris\x12Z\n\x0er\
+    esponse_types\x18\x18\x20\x03(\x0e23.depot.devtools.auth.v0.identity.adm\
+    in.ResponseTypeR\rresponseTypes\x12\x14\n\x05scope\x18\x19\x20\x01(\tR\
+    \x05scope\x122\n\x15sector_identifier_uri\x18\x1a\x20\x01(\tR\x13sectorI\
+    dentifierUri\x12U\n\x0csubject_type\x18\x1b\x20\x01(\x0e22.depot.devtool\
+    s.auth.v0.identity.admin.SubjectTypeR\x0bsubjectType\x12{\n\x1atoken_end\
+    point_auth_method\x18\x1c\x20\x01(\x0e2>.depot.devtools.auth.v0.identity\
+    .admin.TokenEndpointAuthMethodR\x17tokenEndpointAuthMethod\x12\x88\x01\n\
+    \x1ftoken_endpoint_auth_signing_alg\x18\x1d\x20\x01(\x0e2B.depot.devtool\
+    s.auth.v0.identity.admin.TokenEndpointAuthSigningAlgR\x1btokenEndpointAu\
+    thSigningAlg\x12\x17\n\x07tos_uri\x18\x1e\x20\x01(\tR\x06tosUri\x12\x81\
+    \x01\n\x1cuserinfo_signed_response_alg\x18\x1f\x20\x01(\x0e2@.depot.devt\
     ools.auth.v0.identity.admin.UserinfoSignedResponseAlgR\x19userinfoSigned\
-    ResponseAlg\x12R\n\x0bclient_type\x18!\x20\x01(\x0e21.depot.devtools.aut\
-    h.v0.identity.admin.ClientTypeR\nclientType\"\x8e\x0e\n\x19CreateOAuth2C\
-    lientRequest\x120\n\x14allowed_cors_origins\x18\x01\x20\x03(\tR\x12allow\
-    edCorsOrigins\x12\x1a\n\x08audience\x18\x02\x20\x03(\tR\x08audience\x12M\
-    \n#backchannel_logout_session_required\x18\x03\x20\x01(\x08R\x20backchan\
-    nelLogoutSessionRequired\x124\n\x16backchannel_logout_uri\x18\x04\x20\
-    \x01(\tR\x14backchannelLogoutUri\x12\x1f\n\x0bclient_name\x18\x06\x20\
-    \x01(\tR\nclientName\x12\x1d\n\nclient_uri\x18\x08\x20\x01(\tR\tclientUr\
-    i\x12\x1a\n\x08contacts\x18\t\x20\x03(\tR\x08contacts\x12O\n$frontchanne\
-    l_logout_session_required\x18\x0b\x20\x01(\x08R!frontchannelLogoutSessio\
-    nRequired\x126\n\x17frontchannel_logout_uri\x18\x0c\x20\x01(\tR\x15front\
-    channelLogoutUri\x12Q\n\x0bgrant_types\x18\r\x20\x03(\x0e20.depot.devtoo\
-    ls.auth.v0.identity.admin.GrantTypeR\ngrantTypes\x12+\n\x04jwks\x18\x0e\
-    \x20\x01(\x0b2\x17.google.protobuf.StructR\x04jwks\x12\x19\n\x08jwks_uri\
-    \x18\x0f\x20\x01(\tR\x07jwksUri\x12\x19\n\x08logo_uri\x18\x10\x20\x01(\t\
-    R\x07logoUri\x123\n\x08metadata\x18\x11\x20\x01(\x0b2\x17.google.protobu\
-    f.StructR\x08metadata\x12\x14\n\x05owner\x18\x12\x20\x01(\tR\x05owner\
-    \x12\x1d\n\npolicy_uri\x18\x13\x20\x01(\tR\tpolicyUri\x129\n\x19post_log\
-    out_redirect_uris\x18\x14\x20\x03(\tR\x16postLogoutRedirectUris\x12#\n\r\
-    redirect_uris\x18\x15\x20\x03(\tR\x0credirectUris\x12{\n\x1arequest_obje\
-    ct_signing_alg\x18\x16\x20\x01(\x0e2>.depot.devtools.auth.v0.identity.ad\
-    min.RequestObjectSigningAlgR\x17requestObjectSigningAlg\x12!\n\x0creques\
-    t_uris\x18\x17\x20\x03(\tR\x0brequestUris\x12Z\n\x0eresponse_types\x18\
-    \x18\x20\x03(\x0e23.depot.devtools.auth.v0.identity.admin.ResponseTypeR\
-    \rresponseTypes\x12\x14\n\x05scope\x18\x19\x20\x01(\tR\x05scope\x122\n\
-    \x15sector_identifier_uri\x18\x1a\x20\x01(\tR\x13sectorIdentifierUri\x12\
-    U\n\x0csubject_type\x18\x1b\x20\x01(\x0e22.depot.devtools.auth.v0.identi\
-    ty.admin.SubjectTypeR\x0bsubjectType\x12{\n\x1atoken_endpoint_auth_metho\
-    d\x18\x1c\x20\x01(\x0e2>.depot.devtools.auth.v0.identity.admin.TokenEndp\
-    ointAuthMethodR\x17tokenEndpointAuthMethod\x12\x88\x01\n\x1ftoken_endpoi\
-    nt_auth_signing_alg\x18\x1d\x20\x01(\x0e2B.depot.devtools.auth.v0.identi\
-    ty.admin.TokenEndpointAuthSigningAlgR\x1btokenEndpointAuthSigningAlg\x12\
-    \x17\n\x07tos_uri\x18\x1e\x20\x01(\tR\x06tosUri\x12\x81\x01\n\x1cuserinf\
-    o_signed_response_alg\x18\x1f\x20\x01(\x0e2@.depot.devtools.auth.v0.iden\
-    tity.admin.UserinfoSignedResponseAlgR\x19userinfoSignedResponseAlg\x12#\
-    \n\rclient_secret\x18\x20\x20\x01(\tR\x0cclientSecret\x12R\n\x0bclient_t\
-    ype\x18!\x20\x01(\x0e21.depot.devtools.auth.v0.identity.admin.ClientType\
-    R\nclientType\"^\n\x1aCreateOAuth2ClientResponse\x12\x1b\n\tclient_id\
-    \x18\x01\x20\x01(\tR\x08clientId\x12#\n\rclient_secret\x18\x02\x20\x01(\
-    \tR\x0cclientSecret\"\xd7\r\n\x19UpdateOAuth2ClientRequest\x120\n\x14all\
-    owed_cors_origins\x18\x01\x20\x03(\tR\x12allowedCorsOrigins\x12\x1a\n\
-    \x08audience\x18\x02\x20\x03(\tR\x08audience\x12M\n#backchannel_logout_s\
-    ession_required\x18\x03\x20\x01(\x08R\x20backchannelLogoutSessionRequire\
-    d\x124\n\x16backchannel_logout_uri\x18\x04\x20\x01(\tR\x14backchannelLog\
-    outUri\x12\x1f\n\x0bclient_name\x18\x06\x20\x01(\tR\nclientName\x12\x1d\
-    \n\nclient_uri\x18\x08\x20\x01(\tR\tclientUri\x12\x1a\n\x08contacts\x18\
-    \t\x20\x03(\tR\x08contacts\x12O\n$frontchannel_logout_session_required\
-    \x18\x0b\x20\x01(\x08R!frontchannelLogoutSessionRequired\x126\n\x17front\
-    channel_logout_uri\x18\x0c\x20\x01(\tR\x15frontchannelLogoutUri\x12Q\n\
-    \x0bgrant_types\x18\r\x20\x03(\x0e20.depot.devtools.auth.v0.identity.adm\
-    in.GrantTypeR\ngrantTypes\x12+\n\x04jwks\x18\x0e\x20\x01(\x0b2\x17.googl\
-    e.protobuf.StructR\x04jwks\x12\x19\n\x08jwks_uri\x18\x0f\x20\x01(\tR\x07\
-    jwksUri\x12\x19\n\x08logo_uri\x18\x10\x20\x01(\tR\x07logoUri\x123\n\x08m\
-    etadata\x18\x11\x20\x01(\x0b2\x17.google.protobuf.StructR\x08metadata\
-    \x12\x14\n\x05owner\x18\x12\x20\x01(\tR\x05owner\x12\x1d\n\npolicy_uri\
-    \x18\x13\x20\x01(\tR\tpolicyUri\x129\n\x19post_logout_redirect_uris\x18\
-    \x14\x20\x03(\tR\x16postLogoutRedirectUris\x12#\n\rredirect_uris\x18\x15\
-    \x20\x03(\tR\x0credirectUris\x12{\n\x1arequest_object_signing_alg\x18\
-    \x16\x20\x01(\x0e2>.depot.devtools.auth.v0.identity.admin.RequestObjectS\
-    igningAlgR\x17requestObjectSigningAlg\x12!\n\x0crequest_uris\x18\x17\x20\
-    \x03(\tR\x0brequestUris\x12Z\n\x0eresponse_types\x18\x18\x20\x03(\x0e23.\
-    depot.devtools.auth.v0.identity.admin.ResponseTypeR\rresponseTypes\x12\
-    \x14\n\x05scope\x18\x19\x20\x01(\tR\x05scope\x122\n\x15sector_identifier\
-    _uri\x18\x1a\x20\x01(\tR\x13sectorIdentifierUri\x12U\n\x0csubject_type\
-    \x18\x1b\x20\x01(\x0e22.depot.devtools.auth.v0.identity.admin.SubjectTyp\
-    eR\x0bsubjectType\x12{\n\x1atoken_endpoint_auth_method\x18\x1c\x20\x01(\
-    \x0e2>.depot.devtools.auth.v0.identity.admin.TokenEndpointAuthMethodR\
-    \x17tokenEndpointAuthMethod\x12\x88\x01\n\x1ftoken_endpoint_auth_signing\
-    _alg\x18\x1d\x20\x01(\x0e2B.depot.devtools.auth.v0.identity.admin.TokenE\
-    ndpointAuthSigningAlgR\x1btokenEndpointAuthSigningAlg\x12\x17\n\x07tos_u\
-    ri\x18\x1e\x20\x01(\tR\x06tosUri\x12\x81\x01\n\x1cuserinfo_signed_respon\
-    se_alg\x18\x1f\x20\x01(\x0e2@.depot.devtools.auth.v0.identity.admin.User\
-    infoSignedResponseAlgR\x19userinfoSignedResponseAlg\x12#\n\rclient_secre\
-    t\x18\x20\x20\x01(\tR\x0cclientSecret\x12\x1b\n\tclient_id\x18!\x20\x01(\
-    \tR\x08clientId\"^\n\x1aUpdateOAuth2ClientResponse\x12\x1b\n\tclient_id\
-    \x18\x01\x20\x01(\tR\x08clientId\x12#\n\rclient_secret\x18\x02\x20\x01(\
-    \tR\x0cclientSecret\"8\n\x19DeleteOAuth2ClientRequest\x12\x1b\n\tclient_\
-    id\x18\x01\x20\x01(\tR\x08clientId\"\x1c\n\x1aDeleteOAuth2ClientResponse\
-    \"6\n\x13GetAddressesRequest\x12\x1f\n\x0bidentity_id\x18\x01\x20\x01(\t\
-    R\nidentityId\"\xa4\x02\n\x14GetAddressesResponse\x12a\n\taddresses\x18\
-    \x01\x20\x03(\x0b2C.depot.devtools.auth.v0.identity.admin.GetAddressesRe\
-    sponse.AddressR\taddresses\x1a\xa8\x01\n\x07Address\x12\x0e\n\x02id\x18\
-    \x01\x20\x01(\tR\x02id\x12\x1f\n\x0bidentity_id\x18\x02\x20\x01(\tR\nide\
-    ntityId\x12\x12\n\x04name\x18\x03\x20\x01(\tR\x04name\x12\x18\n\x07addre\
-    ss\x18\x04\x20\x01(\tR\x07address\x12\x1a\n\x08verified\x18\x05\x20\x01(\
-    \x08R\x08verified\x12\"\n\rid_schema_key\x18\x06\x20\x01(\tR\x0bidSchema\
-    Key\"T\n\x11GetAddressRequest\x12\x10\n\x02id\x18\x01\x20\x01(\tH\0R\x02\
-    id\x12$\n\x0cverification\x18\x02\x20\x01(\tH\0R\x0cverificationB\x07\n\
-    \x05match\"\xb3\x01\n\x12GetAddressResponse\x12\x0e\n\x02id\x18\x01\x20\
-    \x01(\tR\x02id\x12\x1f\n\x0bidentity_id\x18\x02\x20\x01(\tR\nidentityId\
-    \x12\x12\n\x04name\x18\x03\x20\x01(\tR\x04name\x12\x18\n\x07address\x18\
-    \x04\x20\x01(\tR\x07address\x12\x1a\n\x08verified\x18\x05\x20\x01(\x08R\
-    \x08verified\x12\"\n\rid_schema_key\x18\x06\x20\x01(\tR\x0bidSchemaKey\"\
-    m\n\x14UpdateAddressRequest\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\
-    \x12\x1c\n\x08verified\x18\x02\x20\x01(\x08H\0R\x08verified\x12\x1a\n\
-    \x07address\x18\x03\x20\x01(\tH\0R\x07addressB\x0b\n\tattribute\"\x17\n\
-    \x15UpdateAddressResponse\"3\n\x10GetTraitsRequest\x12\x1f\n\x0bidentity\
-    _id\x18\x01\x20\x01(\tR\nidentityId\"+\n\x11GetTraitsResponse\x12\x16\n\
-    \x06traits\x18\x01\x20\x01(\tR\x06traits\"N\n\x13UpdateTraitsRequest\x12\
-    \x1f\n\x0bidentity_id\x18\x01\x20\x01(\tR\nidentityId\x12\x16\n\x06trait\
-    s\x18\x02\x20\x01(\tR\x06traits\"\x16\n\x14UpdateTraitsResponse\"B\n\x1f\
-    GetIdentityLoginAttemptsRequest\x12\x1f\n\x0bidentity_id\x18\x01\x20\x01\
-    (\tR\nidentityId\"\x91\x03\n\x20GetIdentityLoginAttemptsResponse\x12k\n\
-    \x08attempts\x18\x01\x20\x03(\x0b2O.depot.devtools.auth.v0.identity.admi\
-    n.GetIdentityLoginAttemptsResponse.AttemptR\x08attempts\x1a\xff\x01\n\
-    \x07Attempt\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x1f\n\x0bident\
-    ity_id\x18\x02\x20\x01(\tR\nidentityId\x12\x16\n\x06status\x18\x03\x20\
-    \x01(\tR\x06status\x125\n\x16authentication_methods\x18\x04\x20\x03(\tR\
-    \x15authenticationMethods\x129\n\ncreated_at\x18\x05\x20\x01(\x0b2\x1a.g\
-    oogle.protobuf.TimestampR\tcreatedAt\x129\n\nexpires_at\x18\x06\x20\x01(\
-    \x0b2\x1a.google.protobuf.TimestampR\texpiresAt\"^\n\x15CreateIdSchemaRe\
-    quest\x12\x12\n\x04name\x18\x01\x20\x01(\tR\x04name\x121\n\x07content\
-    \x18\x02\x20\x01(\x0b2\x17.google.protobuf.StructR\x07content\"(\n\x16Cr\
-    eateIdSchemaResponse\x12\x0e\n\x02id\x18\x02\x20\x01(\tR\x02id\"\x15\n\
-    \x13GetIdSchemasRequest\"\xfb\x02\n\x14GetIdSchemasResponse\x12h\n\x0bjs\
-    onschemas\x18\x01\x20\x03(\x0b2F.depot.devtools.auth.v0.identity.admin.G\
-    etIdSchemasResponse.JsonSchemaR\x0bjsonschemas\x1a\xf8\x01\n\nJsonSchema\
+    ResponseAlg\x12#\n\rclient_secret\x18\x20\x20\x01(\tR\x0cclientSecret\
+    \x12\x1b\n\tclient_id\x18!\x20\x01(\tR\x08clientId\"^\n\x1aUpdateOAuth2C\
+    lientResponse\x12\x1b\n\tclient_id\x18\x01\x20\x01(\tR\x08clientId\x12#\
+    \n\rclient_secret\x18\x02\x20\x01(\tR\x0cclientSecret\"8\n\x19DeleteOAut\
+    h2ClientRequest\x12\x1b\n\tclient_id\x18\x01\x20\x01(\tR\x08clientId\"\
+    \x1c\n\x1aDeleteOAuth2ClientResponse\"6\n\x13GetAddressesRequest\x12\x1f\
+    \n\x0bidentity_id\x18\x01\x20\x01(\tR\nidentityId\"\xa4\x02\n\x14GetAddr\
+    essesResponse\x12a\n\taddresses\x18\x01\x20\x03(\x0b2C.depot.devtools.au\
+    th.v0.identity.admin.GetAddressesResponse.AddressR\taddresses\x1a\xa8\
+    \x01\n\x07Address\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x1f\n\
+    \x0bidentity_id\x18\x02\x20\x01(\tR\nidentityId\x12\x12\n\x04name\x18\
+    \x03\x20\x01(\tR\x04name\x12\x18\n\x07address\x18\x04\x20\x01(\tR\x07add\
+    ress\x12\x1a\n\x08verified\x18\x05\x20\x01(\x08R\x08verified\x12\"\n\rid\
+    _schema_key\x18\x06\x20\x01(\tR\x0bidSchemaKey\"T\n\x11GetAddressRequest\
+    \x12\x10\n\x02id\x18\x01\x20\x01(\tH\0R\x02id\x12$\n\x0cverification\x18\
+    \x02\x20\x01(\tH\0R\x0cverificationB\x07\n\x05match\"\xb3\x01\n\x12GetAd\
+    dressResponse\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x1f\n\x0bide\
+    ntity_id\x18\x02\x20\x01(\tR\nidentityId\x12\x12\n\x04name\x18\x03\x20\
+    \x01(\tR\x04name\x12\x18\n\x07address\x18\x04\x20\x01(\tR\x07address\x12\
+    \x1a\n\x08verified\x18\x05\x20\x01(\x08R\x08verified\x12\"\n\rid_schema_\
+    key\x18\x06\x20\x01(\tR\x0bidSchemaKey\"m\n\x14UpdateAddressRequest\x12\
+    \x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x1c\n\x08verified\x18\x02\x20\
+    \x01(\x08H\0R\x08verified\x12\x1a\n\x07address\x18\x03\x20\x01(\tH\0R\
+    \x07addressB\x0b\n\tattribute\"\x17\n\x15UpdateAddressResponse\"4\n\x11G\
+    etProfileRequest\x12\x1f\n\x0bidentity_id\x18\x01\x20\x01(\tR\nidentityI\
+    d\".\n\x12GetProfileResponse\x12\x18\n\x07profile\x18\x01\x20\x01(\tR\
+    \x07profile\"Q\n\x14UpdateProfileRequest\x12\x1f\n\x0bidentity_id\x18\
+    \x01\x20\x01(\tR\nidentityId\x12\x18\n\x07profile\x18\x02\x20\x01(\tR\
+    \x07profile\"\x17\n\x15UpdateProfileResponse\"B\n\x1fGetIdentityLoginAtt\
+    emptsRequest\x12\x1f\n\x0bidentity_id\x18\x01\x20\x01(\tR\nidentityId\"\
+    \x91\x03\n\x20GetIdentityLoginAttemptsResponse\x12k\n\x08attempts\x18\
+    \x01\x20\x03(\x0b2O.depot.devtools.auth.v0.identity.admin.GetIdentityLog\
+    inAttemptsResponse.AttemptR\x08attempts\x1a\xff\x01\n\x07Attempt\x12\x0e\
+    \n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x1f\n\x0bidentity_id\x18\x02\x20\
+    \x01(\tR\nidentityId\x12\x16\n\x06status\x18\x03\x20\x01(\tR\x06status\
+    \x125\n\x16authentication_methods\x18\x04\x20\x03(\tR\x15authenticationM\
+    ethods\x129\n\ncreated_at\x18\x05\x20\x01(\x0b2\x1a.google.protobuf.Time\
+    stampR\tcreatedAt\x129\n\nexpires_at\x18\x06\x20\x01(\x0b2\x1a.google.pr\
+    otobuf.TimestampR\texpiresAt\"^\n\x15CreateIdSchemaRequest\x12\x12\n\x04\
+    name\x18\x01\x20\x01(\tR\x04name\x121\n\x07content\x18\x02\x20\x01(\x0b2\
+    \x17.google.protobuf.StructR\x07content\"(\n\x16CreateIdSchemaResponse\
+    \x12\x0e\n\x02id\x18\x02\x20\x01(\tR\x02id\"\x15\n\x13GetIdSchemasReques\
+    t\"\xfb\x02\n\x14GetIdSchemasResponse\x12h\n\x0bjsonschemas\x18\x01\x20\
+    \x03(\x0b2F.depot.devtools.auth.v0.identity.admin.GetIdSchemasResponse.J\
+    sonSchemaR\x0bjsonschemas\x1a\xf8\x01\n\nJsonSchema\x12\x0e\n\x02id\x18\
+    \x01\x20\x01(\tR\x02id\x12\x12\n\x04name\x18\x02\x20\x01(\tR\x04name\x12\
+    1\n\x07content\x18\x03\x20\x01(\x0b2\x17.google.protobuf.StructR\x07cont\
+    ent\x129\n\ncreated_at\x18\x04\x20\x01(\x0b2\x1a.google.protobuf.Timesta\
+    mpR\tcreatedAt\x129\n\nupdated_at\x18\x05\x20\x01(\x0b2\x1a.google.proto\
+    buf.TimestampR\tupdatedAt\x12\x1d\n\nis_default\x18\x06\x20\x01(\x08R\ti\
+    sDefault\"$\n\x12GetIdSchemaRequest\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\
+    \x02id\"\x81\x02\n\x13GetIdSchemaResponse\x12\x0e\n\x02id\x18\x01\x20\
+    \x01(\tR\x02id\x12\x12\n\x04name\x18\x02\x20\x01(\tR\x04name\x121\n\x07c\
+    ontent\x18\x03\x20\x01(\x0b2\x17.google.protobuf.StructR\x07content\x129\
+    \n\ncreated_at\x18\x04\x20\x01(\x0b2\x1a.google.protobuf.TimestampR\tcre\
+    atedAt\x129\n\nupdated_at\x18\x05\x20\x01(\x0b2\x1a.google.protobuf.Time\
+    stampR\tupdatedAt\x12\x1d\n\nis_default\x18\x06\x20\x01(\x08R\tisDefault\
+    \"\x1b\n\x19GetDefaultIdSchemaRequest\"\x88\x02\n\x1aGetDefaultIdSchemaR\
+    esponse\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x12\n\x04name\x18\
+    \x02\x20\x01(\tR\x04name\x121\n\x07content\x18\x03\x20\x01(\x0b2\x17.goo\
+    gle.protobuf.StructR\x07content\x129\n\ncreated_at\x18\x04\x20\x01(\x0b2\
+    \x1a.google.protobuf.TimestampR\tcreatedAt\x129\n\nupdated_at\x18\x05\
+    \x20\x01(\x0b2\x1a.google.protobuf.TimestampR\tupdatedAt\x12\x1d\n\nis_d\
+    efault\x18\x06\x20\x01(\x08R\tisDefault\"n\n\x15UpdateIdSchemaRequest\
     \x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x12\n\x04name\x18\x02\x20\
     \x01(\tR\x04name\x121\n\x07content\x18\x03\x20\x01(\x0b2\x17.google.prot\
-    obuf.StructR\x07content\x129\n\ncreated_at\x18\x04\x20\x01(\x0b2\x1a.goo\
-    gle.protobuf.TimestampR\tcreatedAt\x129\n\nupdated_at\x18\x05\x20\x01(\
-    \x0b2\x1a.google.protobuf.TimestampR\tupdatedAt\x12\x1d\n\nis_default\
-    \x18\x06\x20\x01(\x08R\tisDefault\"$\n\x12GetIdSchemaRequest\x12\x0e\n\
-    \x02id\x18\x01\x20\x01(\tR\x02id\"\x81\x02\n\x13GetIdSchemaResponse\x12\
-    \x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x12\n\x04name\x18\x02\x20\x01\
-    (\tR\x04name\x121\n\x07content\x18\x03\x20\x01(\x0b2\x17.google.protobuf\
-    .StructR\x07content\x129\n\ncreated_at\x18\x04\x20\x01(\x0b2\x1a.google.\
-    protobuf.TimestampR\tcreatedAt\x129\n\nupdated_at\x18\x05\x20\x01(\x0b2\
-    \x1a.google.protobuf.TimestampR\tupdatedAt\x12\x1d\n\nis_default\x18\x06\
-    \x20\x01(\x08R\tisDefault\"\x1b\n\x19GetDefaultIdSchemaRequest\"\x88\x02\
-    \n\x1aGetDefaultIdSchemaResponse\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02\
-    id\x12\x12\n\x04name\x18\x02\x20\x01(\tR\x04name\x121\n\x07content\x18\
-    \x03\x20\x01(\x0b2\x17.google.protobuf.StructR\x07content\x129\n\ncreate\
-    d_at\x18\x04\x20\x01(\x0b2\x1a.google.protobuf.TimestampR\tcreatedAt\x12\
-    9\n\nupdated_at\x18\x05\x20\x01(\x0b2\x1a.google.protobuf.TimestampR\tup\
-    datedAt\x12\x1d\n\nis_default\x18\x06\x20\x01(\x08R\tisDefault\"n\n\x15U\
-    pdateIdSchemaRequest\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x12\n\
-    \x04name\x18\x02\x20\x01(\tR\x04name\x121\n\x07content\x18\x03\x20\x01(\
-    \x0b2\x17.google.protobuf.StructR\x07content\"\x18\n\x16UpdateIdSchemaRe\
-    sponse\",\n\x1aMarkDefaultIdSchemaRequest\x12\x0e\n\x02id\x18\x01\x20\
-    \x01(\tR\x02id\"\x1d\n\x1bMarkDefaultIdSchemaResponse\"'\n\x15DeleteIdSc\
-    hemaRequest\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\"\x18\n\x16DeleteI\
-    dSchemaResponse\"\x17\n\x15GetEmailsSetupRequest\"\xcc\x07\n\x16GetEmail\
-    sSetupResponse\x12e\n\x07welcome\x18\x01\x20\x01(\x0b2K.depot.devtools.a\
-    uth.v0.identity.admin.GetEmailsSetupResponse.EmailTemplateR\x07welcome\
-    \x12~\n\x14account_verification\x18\x02\x20\x01(\x0b2K.depot.devtools.au\
-    th.v0.identity.admin.GetEmailsSetupResponse.EmailTemplateR\x13accountVer\
-    ification\x12v\n\x10account_recovery\x18\x03\x20\x01(\x0b2K.depot.devtoo\
-    ls.auth.v0.identity.admin.GetEmailsSetupResponse.EmailTemplateR\x0faccou\
-    ntRecovery\x12x\n\x11account_recovered\x18\x04\x20\x01(\x0b2K.depot.devt\
-    ools.auth.v0.identity.admin.GetEmailsSetupResponse.EmailTemplateR\x10acc\
-    ountRecovered\x12]\n\x03otp\x18\x05\x20\x01(\x0b2K.depot.devtools.auth.v\
-    0.identity.admin.GetEmailsSetupResponse.EmailTemplateR\x03otp\x12]\n\x04\
-    smtp\x18\x06\x20\x01(\x0b2I.depot.devtools.auth.v0.identity.admin.GetEma\
-    ilsSetupResponse.EmailSenderR\x04smtp\x12\x1d\n\nproject_id\x18\x07\x20\
-    \x01(\tR\tprojectId\x1aC\n\rEmailTemplate\x12\x18\n\x07content\x18\x03\
-    \x20\x01(\tR\x07content\x12\x18\n\x07subject\x18\x04\x20\x01(\tR\x07subj\
+    obuf.StructR\x07content\"\x18\n\x16UpdateIdSchemaResponse\",\n\x1aMarkDe\
+    faultIdSchemaRequest\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\"\x1d\n\
+    \x1bMarkDefaultIdSchemaResponse\"'\n\x15DeleteIdSchemaRequest\x12\x0e\n\
+    \x02id\x18\x01\x20\x01(\tR\x02id\"\x18\n\x16DeleteIdSchemaResponse\"\x17\
+    \n\x15GetEmailsSetupRequest\"\xcc\x07\n\x16GetEmailsSetupResponse\x12e\n\
+    \x07welcome\x18\x01\x20\x01(\x0b2K.depot.devtools.auth.v0.identity.admin\
+    .GetEmailsSetupResponse.EmailTemplateR\x07welcome\x12~\n\x14account_veri\
+    fication\x18\x02\x20\x01(\x0b2K.depot.devtools.auth.v0.identity.admin.Ge\
+    tEmailsSetupResponse.EmailTemplateR\x13accountVerification\x12v\n\x10acc\
+    ount_recovery\x18\x03\x20\x01(\x0b2K.depot.devtools.auth.v0.identity.adm\
+    in.GetEmailsSetupResponse.EmailTemplateR\x0faccountRecovery\x12x\n\x11ac\
+    count_recovered\x18\x04\x20\x01(\x0b2K.depot.devtools.auth.v0.identity.a\
+    dmin.GetEmailsSetupResponse.EmailTemplateR\x10accountRecovered\x12]\n\
+    \x03otp\x18\x05\x20\x01(\x0b2K.depot.devtools.auth.v0.identity.admin.Get\
+    EmailsSetupResponse.EmailTemplateR\x03otp\x12]\n\x04smtp\x18\x06\x20\x01\
+    (\x0b2I.depot.devtools.auth.v0.identity.admin.GetEmailsSetupResponse.Ema\
+    ilSenderR\x04smtp\x12\x1d\n\nproject_id\x18\x07\x20\x01(\tR\tprojectId\
+    \x1aC\n\rEmailTemplate\x12\x18\n\x07content\x18\x03\x20\x01(\tR\x07conte\
+    nt\x12\x18\n\x07subject\x18\x04\x20\x01(\tR\x07subject\x1a\xb6\x01\n\x0b\
+    EmailSender\x12#\n\remail_address\x18\x01\x20\x01(\tR\x0cemailAddress\
+    \x12\x1b\n\tsmtp_host\x18\x02\x20\x01(\tR\x08smtpHost\x12\x1b\n\tsmtp_po\
+    rt\x18\x03\x20\x01(\rR\x08smtpPort\x12#\n\rsmtp_username\x18\x04\x20\x01\
+    (\tR\x0csmtpUsername\x12#\n\rsmtp_password\x18\x05\x20\x01(\tR\x0csmtpPa\
+    ssword\"\xbc\x07\n\x18UpdateEmailsSetupRequest\x12g\n\x07welcome\x18\x01\
+    \x20\x01(\x0b2M.depot.devtools.auth.v0.identity.admin.UpdateEmailsSetupR\
+    equest.EmailTemplateR\x07welcome\x12\x80\x01\n\x14account_verification\
+    \x18\x02\x20\x01(\x0b2M.depot.devtools.auth.v0.identity.admin.UpdateEmai\
+    lsSetupRequest.EmailTemplateR\x13accountVerification\x12x\n\x10account_r\
+    ecovery\x18\x03\x20\x01(\x0b2M.depot.devtools.auth.v0.identity.admin.Upd\
+    ateEmailsSetupRequest.EmailTemplateR\x0faccountRecovery\x12z\n\x11accoun\
+    t_recovered\x18\x04\x20\x01(\x0b2M.depot.devtools.auth.v0.identity.admin\
+    .UpdateEmailsSetupRequest.EmailTemplateR\x10accountRecovered\x12_\n\x03o\
+    tp\x18\x05\x20\x01(\x0b2M.depot.devtools.auth.v0.identity.admin.UpdateEm\
+    ailsSetupRequest.EmailTemplateR\x03otp\x12_\n\x04smtp\x18\x06\x20\x01(\
+    \x0b2K.depot.devtools.auth.v0.identity.admin.UpdateEmailsSetupRequest.Em\
+    ailSenderR\x04smtp\x1aC\n\rEmailTemplate\x12\x18\n\x07content\x18\x01\
+    \x20\x01(\tR\x07content\x12\x18\n\x07subject\x18\x02\x20\x01(\tR\x07subj\
     ect\x1a\xb6\x01\n\x0bEmailSender\x12#\n\remail_address\x18\x01\x20\x01(\
     \tR\x0cemailAddress\x12\x1b\n\tsmtp_host\x18\x02\x20\x01(\tR\x08smtpHost\
     \x12\x1b\n\tsmtp_port\x18\x03\x20\x01(\rR\x08smtpPort\x12#\n\rsmtp_usern\
     ame\x18\x04\x20\x01(\tR\x0csmtpUsername\x12#\n\rsmtp_password\x18\x05\
-    \x20\x01(\tR\x0csmtpPassword\"\xbc\x07\n\x18UpdateEmailsSetupRequest\x12\
-    g\n\x07welcome\x18\x01\x20\x01(\x0b2M.depot.devtools.auth.v0.identity.ad\
-    min.UpdateEmailsSetupRequest.EmailTemplateR\x07welcome\x12\x80\x01\n\x14\
-    account_verification\x18\x02\x20\x01(\x0b2M.depot.devtools.auth.v0.ident\
-    ity.admin.UpdateEmailsSetupRequest.EmailTemplateR\x13accountVerification\
-    \x12x\n\x10account_recovery\x18\x03\x20\x01(\x0b2M.depot.devtools.auth.v\
-    0.identity.admin.UpdateEmailsSetupRequest.EmailTemplateR\x0faccountRecov\
-    ery\x12z\n\x11account_recovered\x18\x04\x20\x01(\x0b2M.depot.devtools.au\
-    th.v0.identity.admin.UpdateEmailsSetupRequest.EmailTemplateR\x10accountR\
-    ecovered\x12_\n\x03otp\x18\x05\x20\x01(\x0b2M.depot.devtools.auth.v0.ide\
-    ntity.admin.UpdateEmailsSetupRequest.EmailTemplateR\x03otp\x12_\n\x04smt\
-    p\x18\x06\x20\x01(\x0b2K.depot.devtools.auth.v0.identity.admin.UpdateEma\
-    ilsSetupRequest.EmailSenderR\x04smtp\x1aC\n\rEmailTemplate\x12\x18\n\x07\
-    content\x18\x01\x20\x01(\tR\x07content\x12\x18\n\x07subject\x18\x02\x20\
-    \x01(\tR\x07subject\x1a\xb6\x01\n\x0bEmailSender\x12#\n\remail_address\
-    \x18\x01\x20\x01(\tR\x0cemailAddress\x12\x1b\n\tsmtp_host\x18\x02\x20\
-    \x01(\tR\x08smtpHost\x12\x1b\n\tsmtp_port\x18\x03\x20\x01(\rR\x08smtpPor\
-    t\x12#\n\rsmtp_username\x18\x04\x20\x01(\tR\x0csmtpUsername\x12#\n\rsmtp\
-    _password\x18\x05\x20\x01(\tR\x0csmtpPassword\"\x1b\n\x19UpdateEmailsSet\
-    upResponse\"\xcb\x01\n\x1cGetUserBaseStatisticsRequest\x12\x1f\n\x0bdays\
-    _before\x18\x01\x20\x01(\rR\ndaysBefore\x12F\n\x11lifetime_start_at\x18\
-    \x02\x20\x01(\x0b2\x1a.google.protobuf.TimestampR\x0flifetimeStartAt\x12\
-    B\n\x0flifetime_end_at\x18\x03\x20\x01(\x0b2\x1a.google.protobuf.Timesta\
-    mpR\rlifetimeEndAt\"\xa1\x04\n\x1dGetUserBaseStatisticsResponse\x12\x1f\
-    \n\x0btotal_users\x18\x01\x20\x01(\x05R\ntotalUsers\x12y\n\rusers_per_da\
-    y\x18\x02\x20\x03(\x0b2U.depot.devtools.auth.v0.identity.admin.GetUserBa\
-    seStatisticsResponse.UsersPerDayEntryR\x0busersPerDay\x12\x82\x01\n\x10s\
-    essions_per_day\x18\x03\x20\x03(\x0b2X.depot.devtools.auth.v0.identity.a\
-    dmin.GetUserBaseStatisticsResponse.SessionsPerDayEntryR\x0esessionsPerDa\
-    y\x12,\n\x12total_active_users\x18\x04\x20\x01(\x05R\x10totalActiveUsers\
-    \x12.\n\x13total_lifetime_used\x18\x05\x20\x01(\x01R\x11totalLifetimeUse\
-    d\x1a>\n\x10UsersPerDayEntry\x12\x10\n\x03key\x18\x01\x20\x01(\tR\x03key\
-    \x12\x14\n\x05value\x18\x02\x20\x01(\x05R\x05value:\x028\x01\x1aA\n\x13S\
-    essionsPerDayEntry\x12\x10\n\x03key\x18\x01\x20\x01(\tR\x03key\x12\x14\n\
-    \x05value\x18\x02\x20\x01(\x05R\x05value:\x028\x01*l\n\nClientType\x12\
-    \x15\n\x11CLIENT_TYPE_UNSET\x10\0\x12\x16\n\x12CLIENT_FIRST_PARTY\x10\
-    \x01\x12\x16\n\x12CLIENT_THIRD_PARTY\x10\x02\x12\x17\n\x13CLIENT_SYSTEM_\
-    PARTY\x10\x03*A\n\x0bSubjectType\x12\x17\n\x13SUBJECT_TYPE_PUBLIC\x10\0\
-    \x12\x19\n\x15SUBJECT_TYPE_PAIRWISE\x10\x01*\xd5\x01\n\x17TokenEndpointA\
-    uthMethod\x122\n.TOKEN_ENDPOINT_AUTH_METHOD_CLIENT_SECRET_BASIC\x10\0\
-    \x121\n-TOKEN_ENDPOINT_AUTH_METHOD_CLIENT_SECRET_POST\x10\x01\x12.\n*TOK\
-    EN_ENDPOINT_AUTH_METHOD_PRIVATE_KEY_JWT\x10\x02\x12#\n\x1fTOKEN_ENDPOINT\
-    _AUTH_METHOD_NONE\x10\x03*\xcb\x03\n\x1bTokenEndpointAuthSigningAlg\x12)\
-    \n%TOKEN_ENDPOINT_AUTH_SIGNING_ALG_UNSET\x10\0\x12)\n%TOKEN_ENDPOINT_AUT\
-    H_SIGNING_ALG_RS256\x10\x01\x12)\n%TOKEN_ENDPOINT_AUTH_SIGNING_ALG_RS384\
-    \x10\x02\x12)\n%TOKEN_ENDPOINT_AUTH_SIGNING_ALG_RS512\x10\x03\x12)\n%TOK\
-    EN_ENDPOINT_AUTH_SIGNING_ALG_PS256\x10\x04\x12)\n%TOKEN_ENDPOINT_AUTH_SI\
-    GNING_ALG_PS384\x10\x05\x12)\n%TOKEN_ENDPOINT_AUTH_SIGNING_ALG_PS512\x10\
-    \x06\x12)\n%TOKEN_ENDPOINT_AUTH_SIGNING_ALG_ES256\x10\x07\x12)\n%TOKEN_E\
-    NDPOINT_AUTH_SIGNING_ALG_ES384\x10\x08\x12)\n%TOKEN_ENDPOINT_AUTH_SIGNIN\
-    G_ALG_ES512\x10\t*\xba\x01\n\tGrantType\x12\x14\n\x10GRANT_TYPE_UNSET\
-    \x10\0\x12!\n\x1dGRANT_TYPE_CLIENT_CREDENTIALS\x10\x01\x12!\n\x1dGRANT_T\
-    YPE_AUTHORIZATION_CODE\x10\x02\x12\x17\n\x13GRANT_TYPE_IMPLICIT\x10\x03\
-    \x12\x1c\n\x18GRANT_TYPE_REFRESH_TOKEN\x10\x04\x12\x1a\n\x16GRANT_TYPE_D\
-    EVICE_CODE\x10\x05*\x94\x02\n\x0cResponseType\x12\x17\n\x13RESPONSE_TYPE\
-    _UNSET\x10\0\x12\x16\n\x12RESPONSE_TYPE_NONE\x10\x01\x12\x1a\n\x16RESPON\
-    SE_TYPE_ID_TOKEN\x10\x02\x12\x17\n\x13RESPONSE_TYPE_TOKEN\x10\x03\x12\
-    \x16\n\x12RESPONSE_TYPE_CODE\x10\x04\x12\x20\n\x1cRESPONSE_TYPE_ID_TOKEN\
-    _TOKEN\x10\x05\x12\x1f\n\x1bRESPONSE_TYPE_CODE_ID_TOKEN\x10\x06\x12\x1c\
-    \n\x18RESPONSE_TYPE_CODE_TOKEN\x10\x07\x12%\n!RESPONSE_TYPE_CODE_ID_TOKE\
-    N_TOKEN\x10\x08*\x8a\x01\n\x17RequestObjectSigningAlg\x12$\n\x20REQUEST_\
-    OBJECT_SIGNING_ALG_UNSET\x10\0\x12#\n\x1fREQUEST_OBJECT_SIGNING_ALG_NONE\
-    \x10\x01\x12$\n\x20REQUEST_OBJECT_SIGNING_ALG_RS256\x10\x02*\x92\x01\n\
-    \x19UserinfoSignedResponseAlg\x12&\n\"USERINFO_SIGNED_RESPONSE_ALG_UNSET\
-    \x10\0\x12%\n!USERINFO_SIGNED_RESPONSE_ALG_NONE\x10\x01\x12&\n\"USERINFO\
-    _SIGNED_RESPONSE_ALG_RS256\x10\x022\xa3&\n\x05Admin\x12\x8d\x01\n\x0eCre\
-    ateIdentity\x12<.depot.devtools.auth.v0.identity.admin.CreateIdentityReq\
-    uest\x1a=.depot.devtools.auth.v0.identity.admin.CreateIdentityResponse\
-    \x12\x84\x01\n\x0bGetIdentity\x129.depot.devtools.auth.v0.identity.admin\
-    .GetIdentityRequest\x1a:.depot.devtools.auth.v0.identity.admin.GetIdenti\
-    tyResponse\x12\xa8\x01\n\x17GetIdentityByIdentifier\x12E.depot.devtools.\
-    auth.v0.identity.admin.GetIdentityByIdentifierRequest\x1aF.depot.devtool\
-    s.auth.v0.identity.admin.GetIdentityByIdentifierResponse\x12\xab\x01\n\
-    \x18GetIdentitiesByAttribute\x12F.depot.devtools.auth.v0.identity.admin.\
-    GetIdentitiesByAttributeRequest\x1aG.depot.devtools.auth.v0.identity.adm\
-    in.GetIdentitiesByAttributeResponse\x12\x8a\x01\n\rGetIdentities\x12;.de\
-    pot.devtools.auth.v0.identity.admin.GetIdentitiesRequest\x1a<.depot.devt\
-    ools.auth.v0.identity.admin.GetIdentitiesResponse\x12\x8d\x01\n\x0eUpdat\
-    eIdentity\x12<.depot.devtools.auth.v0.identity.admin.UpdateIdentityReque\
-    st\x1a=.depot.devtools.auth.v0.identity.admin.UpdateIdentityResponse\x12\
-    \x8d\x01\n\x0eDeleteIdentity\x12<.depot.devtools.auth.v0.identity.admin.\
-    DeleteIdentityRequest\x1a=.depot.devtools.auth.v0.identity.admin.DeleteI\
-    dentityResponse\x12\x87\x01\n\x0cGetAddresses\x12:.depot.devtools.auth.v\
-    0.identity.admin.GetAddressesRequest\x1a;.depot.devtools.auth.v0.identit\
-    y.admin.GetAddressesResponse\x12\x81\x01\n\nGetAddress\x128.depot.devtoo\
-    ls.auth.v0.identity.admin.GetAddressRequest\x1a9.depot.devtools.auth.v0.\
-    identity.admin.GetAddressResponse\x12\x8a\x01\n\rUpdateAddress\x12;.depo\
-    t.devtools.auth.v0.identity.admin.UpdateAddressRequest\x1a<.depot.devtoo\
-    ls.auth.v0.identity.admin.UpdateAddressResponse\x12~\n\tGetTraits\x127.d\
-    epot.devtools.auth.v0.identity.admin.GetTraitsRequest\x1a8.depot.devtool\
-    s.auth.v0.identity.admin.GetTraitsResponse\x12\x87\x01\n\x0cUpdateTraits\
-    \x12:.depot.devtools.auth.v0.identity.admin.UpdateTraitsRequest\x1a;.dep\
-    ot.devtools.auth.v0.identity.admin.UpdateTraitsResponse\x12\x8d\x01\n\
-    \x0eGetCredentials\x12<.depot.devtools.auth.v0.identity.admin.GetCredent\
-    ialsRequest\x1a=.depot.devtools.auth.v0.identity.admin.GetCredentialsRes\
-    ponse\x12\x93\x01\n\x10UpdateCredential\x12>.depot.devtools.auth.v0.iden\
-    tity.admin.UpdateCredentialRequest\x1a?.depot.devtools.auth.v0.identity.\
-    admin.UpdateCredentialResponse\x12\xab\x01\n\x18GetIdentityLoginAttempts\
-    \x12F.depot.devtools.auth.v0.identity.admin.GetIdentityLoginAttemptsRequ\
-    est\x1aG.depot.devtools.auth.v0.identity.admin.GetIdentityLoginAttemptsR\
-    esponse\x12\x93\x01\n\x10CreateConnection\x12>.depot.devtools.auth.v0.id\
-    entity.admin.CreateConnectionRequest\x1a?.depot.devtools.auth.v0.identit\
-    y.admin.CreateConnectionResponse\x12\x8d\x01\n\x0eGetConnections\x12<.de\
-    pot.devtools.auth.v0.identity.admin.GetConnectionsRequest\x1a=.depot.dev\
-    tools.auth.v0.identity.admin.GetConnectionsResponse\x12\x93\x01\n\x10Upd\
-    ateConnection\x12>.depot.devtools.auth.v0.identity.admin.UpdateConnectio\
-    nRequest\x1a?.depot.devtools.auth.v0.identity.admin.UpdateConnectionResp\
-    onse\x12\x93\x01\n\x10DeleteConnection\x12>.depot.devtools.auth.v0.ident\
-    ity.admin.DeleteConnectionRequest\x1a?.depot.devtools.auth.v0.identity.a\
-    dmin.DeleteConnectionResponse\x12\x8d\x01\n\x0eCreateIdSchema\x12<.depot\
-    .devtools.auth.v0.identity.admin.CreateIdSchemaRequest\x1a=.depot.devtoo\
-    ls.auth.v0.identity.admin.CreateIdSchemaResponse\x12\x87\x01\n\x0cGetIdS\
-    chemas\x12:.depot.devtools.auth.v0.identity.admin.GetIdSchemasRequest\
-    \x1a;.depot.devtools.auth.v0.identity.admin.GetIdSchemasResponse\x12\x84\
-    \x01\n\x0bGetIdSchema\x129.depot.devtools.auth.v0.identity.admin.GetIdSc\
-    hemaRequest\x1a:.depot.devtools.auth.v0.identity.admin.GetIdSchemaRespon\
-    se\x12\x99\x01\n\x12GetDefaultIdSchema\x12@.depot.devtools.auth.v0.ident\
-    ity.admin.GetDefaultIdSchemaRequest\x1aA.depot.devtools.auth.v0.identity\
-    .admin.GetDefaultIdSchemaResponse\x12\x8d\x01\n\x0eUpdateIdSchema\x12<.d\
-    epot.devtools.auth.v0.identity.admin.UpdateIdSchemaRequest\x1a=.depot.de\
-    vtools.auth.v0.identity.admin.UpdateIdSchemaResponse\x12\x9c\x01\n\x13Ma\
-    rkDefaultIdSchema\x12A.depot.devtools.auth.v0.identity.admin.MarkDefault\
-    IdSchemaRequest\x1aB.depot.devtools.auth.v0.identity.admin.MarkDefaultId\
-    SchemaResponse\x12\x8d\x01\n\x0eDeleteIdSchema\x12<.depot.devtools.auth.\
-    v0.identity.admin.DeleteIdSchemaRequest\x1a=.depot.devtools.auth.v0.iden\
-    tity.admin.DeleteIdSchemaResponse\x12\x99\x01\n\x12CreateOAuth2Client\
-    \x12@.depot.devtools.auth.v0.identity.admin.CreateOAuth2ClientRequest\
-    \x1aA.depot.devtools.auth.v0.identity.admin.CreateOAuth2ClientResponse\
-    \x12\x93\x01\n\x10GetOAuth2Clients\x12>.depot.devtools.auth.v0.identity.\
-    admin.GetOAuth2ClientsRequest\x1a?.depot.devtools.auth.v0.identity.admin\
-    .GetOAuth2ClientsResponse\x12\x99\x01\n\x12UpdateOAuth2Client\x12@.depot\
-    .devtools.auth.v0.identity.admin.UpdateOAuth2ClientRequest\x1aA.depot.de\
-    vtools.auth.v0.identity.admin.UpdateOAuth2ClientResponse\x12\x99\x01\n\
-    \x12DeleteOAuth2Client\x12@.depot.devtools.auth.v0.identity.admin.Delete\
-    OAuth2ClientRequest\x1aA.depot.devtools.auth.v0.identity.admin.DeleteOAu\
-    th2ClientResponse\x12\x8d\x01\n\x0eGetEmailsSetup\x12<.depot.devtools.au\
-    th.v0.identity.admin.GetEmailsSetupRequest\x1a=.depot.devtools.auth.v0.i\
-    dentity.admin.GetEmailsSetupResponse\x12\x96\x01\n\x11UpdateEmailsSetup\
-    \x12?.depot.devtools.auth.v0.identity.admin.UpdateEmailsSetupRequest\x1a\
-    @.depot.devtools.auth.v0.identity.admin.UpdateEmailsSetupResponse\x12\
-    \xa2\x01\n\x15GetUserBaseStatistics\x12C.depot.devtools.auth.v0.identity\
-    .admin.GetUserBaseStatisticsRequest\x1aD.depot.devtools.auth.v0.identity\
-    .admin.GetUserBaseStatisticsResponseB\xa2\x01\n\x18dev.auth3.identity.ad\
-    minB\nAdminProtoP\x01Z'github.com/auth3-dev/go-sdk/admin;admin\xf8\x01\
-    \x01\xa2\x02\x04A3IA\xaa\x02\x14Auth3.Identity.Admin\xea\x02\x16Auth3::I\
-    dentity::Admin\xca\x02\x14Auth3\\Identity\\Adminb\x06proto3\
+    \x20\x01(\tR\x0csmtpPassword\"\x1b\n\x19UpdateEmailsSetupResponse\"\xcb\
+    \x01\n\x1cGetUserBaseStatisticsRequest\x12\x1f\n\x0bdays_before\x18\x01\
+    \x20\x01(\rR\ndaysBefore\x12F\n\x11lifetime_start_at\x18\x02\x20\x01(\
+    \x0b2\x1a.google.protobuf.TimestampR\x0flifetimeStartAt\x12B\n\x0flifeti\
+    me_end_at\x18\x03\x20\x01(\x0b2\x1a.google.protobuf.TimestampR\rlifetime\
+    EndAt\"\xa1\x04\n\x1dGetUserBaseStatisticsResponse\x12\x1f\n\x0btotal_us\
+    ers\x18\x01\x20\x01(\x05R\ntotalUsers\x12y\n\rusers_per_day\x18\x02\x20\
+    \x03(\x0b2U.depot.devtools.auth.v0.identity.admin.GetUserBaseStatisticsR\
+    esponse.UsersPerDayEntryR\x0busersPerDay\x12\x82\x01\n\x10sessions_per_d\
+    ay\x18\x03\x20\x03(\x0b2X.depot.devtools.auth.v0.identity.admin.GetUserB\
+    aseStatisticsResponse.SessionsPerDayEntryR\x0esessionsPerDay\x12,\n\x12t\
+    otal_active_users\x18\x04\x20\x01(\x05R\x10totalActiveUsers\x12.\n\x13to\
+    tal_lifetime_used\x18\x05\x20\x01(\x01R\x11totalLifetimeUsed\x1a>\n\x10U\
+    sersPerDayEntry\x12\x10\n\x03key\x18\x01\x20\x01(\tR\x03key\x12\x14\n\
+    \x05value\x18\x02\x20\x01(\x05R\x05value:\x028\x01\x1aA\n\x13SessionsPer\
+    DayEntry\x12\x10\n\x03key\x18\x01\x20\x01(\tR\x03key\x12\x14\n\x05value\
+    \x18\x02\x20\x01(\x05R\x05value:\x028\x01*l\n\nClientType\x12\x15\n\x11C\
+    LIENT_TYPE_UNSET\x10\0\x12\x16\n\x12CLIENT_FIRST_PARTY\x10\x01\x12\x16\n\
+    \x12CLIENT_THIRD_PARTY\x10\x02\x12\x17\n\x13CLIENT_SYSTEM_PARTY\x10\x03*\
+    A\n\x0bSubjectType\x12\x17\n\x13SUBJECT_TYPE_PUBLIC\x10\0\x12\x19\n\x15S\
+    UBJECT_TYPE_PAIRWISE\x10\x01*\xd5\x01\n\x17TokenEndpointAuthMethod\x122\
+    \n.TOKEN_ENDPOINT_AUTH_METHOD_CLIENT_SECRET_BASIC\x10\0\x121\n-TOKEN_END\
+    POINT_AUTH_METHOD_CLIENT_SECRET_POST\x10\x01\x12.\n*TOKEN_ENDPOINT_AUTH_\
+    METHOD_PRIVATE_KEY_JWT\x10\x02\x12#\n\x1fTOKEN_ENDPOINT_AUTH_METHOD_NONE\
+    \x10\x03*\xcb\x03\n\x1bTokenEndpointAuthSigningAlg\x12)\n%TOKEN_ENDPOINT\
+    _AUTH_SIGNING_ALG_UNSET\x10\0\x12)\n%TOKEN_ENDPOINT_AUTH_SIGNING_ALG_RS2\
+    56\x10\x01\x12)\n%TOKEN_ENDPOINT_AUTH_SIGNING_ALG_RS384\x10\x02\x12)\n%T\
+    OKEN_ENDPOINT_AUTH_SIGNING_ALG_RS512\x10\x03\x12)\n%TOKEN_ENDPOINT_AUTH_\
+    SIGNING_ALG_PS256\x10\x04\x12)\n%TOKEN_ENDPOINT_AUTH_SIGNING_ALG_PS384\
+    \x10\x05\x12)\n%TOKEN_ENDPOINT_AUTH_SIGNING_ALG_PS512\x10\x06\x12)\n%TOK\
+    EN_ENDPOINT_AUTH_SIGNING_ALG_ES256\x10\x07\x12)\n%TOKEN_ENDPOINT_AUTH_SI\
+    GNING_ALG_ES384\x10\x08\x12)\n%TOKEN_ENDPOINT_AUTH_SIGNING_ALG_ES512\x10\
+    \t*\xba\x01\n\tGrantType\x12\x14\n\x10GRANT_TYPE_UNSET\x10\0\x12!\n\x1dG\
+    RANT_TYPE_CLIENT_CREDENTIALS\x10\x01\x12!\n\x1dGRANT_TYPE_AUTHORIZATION_\
+    CODE\x10\x02\x12\x17\n\x13GRANT_TYPE_IMPLICIT\x10\x03\x12\x1c\n\x18GRANT\
+    _TYPE_REFRESH_TOKEN\x10\x04\x12\x1a\n\x16GRANT_TYPE_DEVICE_CODE\x10\x05*\
+    \x94\x02\n\x0cResponseType\x12\x17\n\x13RESPONSE_TYPE_UNSET\x10\0\x12\
+    \x16\n\x12RESPONSE_TYPE_NONE\x10\x01\x12\x1a\n\x16RESPONSE_TYPE_ID_TOKEN\
+    \x10\x02\x12\x17\n\x13RESPONSE_TYPE_TOKEN\x10\x03\x12\x16\n\x12RESPONSE_\
+    TYPE_CODE\x10\x04\x12\x20\n\x1cRESPONSE_TYPE_ID_TOKEN_TOKEN\x10\x05\x12\
+    \x1f\n\x1bRESPONSE_TYPE_CODE_ID_TOKEN\x10\x06\x12\x1c\n\x18RESPONSE_TYPE\
+    _CODE_TOKEN\x10\x07\x12%\n!RESPONSE_TYPE_CODE_ID_TOKEN_TOKEN\x10\x08*\
+    \x8a\x01\n\x17RequestObjectSigningAlg\x12$\n\x20REQUEST_OBJECT_SIGNING_A\
+    LG_UNSET\x10\0\x12#\n\x1fREQUEST_OBJECT_SIGNING_ALG_NONE\x10\x01\x12$\n\
+    \x20REQUEST_OBJECT_SIGNING_ALG_RS256\x10\x02*\x92\x01\n\x19UserinfoSigne\
+    dResponseAlg\x12&\n\"USERINFO_SIGNED_RESPONSE_ALG_UNSET\x10\0\x12%\n!USE\
+    RINFO_SIGNED_RESPONSE_ALG_NONE\x10\x01\x12&\n\"USERINFO_SIGNED_RESPONSE_\
+    ALG_RS256\x10\x022\xaa&\n\x05Admin\x12\x8d\x01\n\x0eCreateIdentity\x12<.\
+    depot.devtools.auth.v0.identity.admin.CreateIdentityRequest\x1a=.depot.d\
+    evtools.auth.v0.identity.admin.CreateIdentityResponse\x12\x84\x01\n\x0bG\
+    etIdentity\x129.depot.devtools.auth.v0.identity.admin.GetIdentityRequest\
+    \x1a:.depot.devtools.auth.v0.identity.admin.GetIdentityResponse\x12\xa8\
+    \x01\n\x17GetIdentityByIdentifier\x12E.depot.devtools.auth.v0.identity.a\
+    dmin.GetIdentityByIdentifierRequest\x1aF.depot.devtools.auth.v0.identity\
+    .admin.GetIdentityByIdentifierResponse\x12\xab\x01\n\x18GetIdentitiesByA\
+    ttribute\x12F.depot.devtools.auth.v0.identity.admin.GetIdentitiesByAttri\
+    buteRequest\x1aG.depot.devtools.auth.v0.identity.admin.GetIdentitiesByAt\
+    tributeResponse\x12\x8a\x01\n\rGetIdentities\x12;.depot.devtools.auth.v0\
+    .identity.admin.GetIdentitiesRequest\x1a<.depot.devtools.auth.v0.identit\
+    y.admin.GetIdentitiesResponse\x12\x8d\x01\n\x0eUpdateIdentity\x12<.depot\
+    .devtools.auth.v0.identity.admin.UpdateIdentityRequest\x1a=.depot.devtoo\
+    ls.auth.v0.identity.admin.UpdateIdentityResponse\x12\x8d\x01\n\x0eDelete\
+    Identity\x12<.depot.devtools.auth.v0.identity.admin.DeleteIdentityReques\
+    t\x1a=.depot.devtools.auth.v0.identity.admin.DeleteIdentityResponse\x12\
+    \x87\x01\n\x0cGetAddresses\x12:.depot.devtools.auth.v0.identity.admin.Ge\
+    tAddressesRequest\x1a;.depot.devtools.auth.v0.identity.admin.GetAddresse\
+    sResponse\x12\x81\x01\n\nGetAddress\x128.depot.devtools.auth.v0.identity\
+    .admin.GetAddressRequest\x1a9.depot.devtools.auth.v0.identity.admin.GetA\
+    ddressResponse\x12\x8a\x01\n\rUpdateAddress\x12;.depot.devtools.auth.v0.\
+    identity.admin.UpdateAddressRequest\x1a<.depot.devtools.auth.v0.identity\
+    .admin.UpdateAddressResponse\x12\x81\x01\n\nGetProfile\x128.depot.devtoo\
+    ls.auth.v0.identity.admin.GetProfileRequest\x1a9.depot.devtools.auth.v0.\
+    identity.admin.GetProfileResponse\x12\x8a\x01\n\rUpdateProfile\x12;.depo\
+    t.devtools.auth.v0.identity.admin.UpdateProfileRequest\x1a<.depot.devtoo\
+    ls.auth.v0.identity.admin.UpdateProfileResponse\x12\x8d\x01\n\x0eGetCred\
+    entials\x12<.depot.devtools.auth.v0.identity.admin.GetCredentialsRequest\
+    \x1a=.depot.devtools.auth.v0.identity.admin.GetCredentialsResponse\x12\
+    \x93\x01\n\x10UpdateCredential\x12>.depot.devtools.auth.v0.identity.admi\
+    n.UpdateCredentialRequest\x1a?.depot.devtools.auth.v0.identity.admin.Upd\
+    ateCredentialResponse\x12\xab\x01\n\x18GetIdentityLoginAttempts\x12F.dep\
+    ot.devtools.auth.v0.identity.admin.GetIdentityLoginAttemptsRequest\x1aG.\
+    depot.devtools.auth.v0.identity.admin.GetIdentityLoginAttemptsResponse\
+    \x12\x93\x01\n\x10CreateConnection\x12>.depot.devtools.auth.v0.identity.\
+    admin.CreateConnectionRequest\x1a?.depot.devtools.auth.v0.identity.admin\
+    .CreateConnectionResponse\x12\x8d\x01\n\x0eGetConnections\x12<.depot.dev\
+    tools.auth.v0.identity.admin.GetConnectionsRequest\x1a=.depot.devtools.a\
+    uth.v0.identity.admin.GetConnectionsResponse\x12\x93\x01\n\x10UpdateConn\
+    ection\x12>.depot.devtools.auth.v0.identity.admin.UpdateConnectionReques\
+    t\x1a?.depot.devtools.auth.v0.identity.admin.UpdateConnectionResponse\
+    \x12\x93\x01\n\x10DeleteConnection\x12>.depot.devtools.auth.v0.identity.\
+    admin.DeleteConnectionRequest\x1a?.depot.devtools.auth.v0.identity.admin\
+    .DeleteConnectionResponse\x12\x8d\x01\n\x0eCreateIdSchema\x12<.depot.dev\
+    tools.auth.v0.identity.admin.CreateIdSchemaRequest\x1a=.depot.devtools.a\
+    uth.v0.identity.admin.CreateIdSchemaResponse\x12\x87\x01\n\x0cGetIdSchem\
+    as\x12:.depot.devtools.auth.v0.identity.admin.GetIdSchemasRequest\x1a;.d\
+    epot.devtools.auth.v0.identity.admin.GetIdSchemasResponse\x12\x84\x01\n\
+    \x0bGetIdSchema\x129.depot.devtools.auth.v0.identity.admin.GetIdSchemaRe\
+    quest\x1a:.depot.devtools.auth.v0.identity.admin.GetIdSchemaResponse\x12\
+    \x99\x01\n\x12GetDefaultIdSchema\x12@.depot.devtools.auth.v0.identity.ad\
+    min.GetDefaultIdSchemaRequest\x1aA.depot.devtools.auth.v0.identity.admin\
+    .GetDefaultIdSchemaResponse\x12\x8d\x01\n\x0eUpdateIdSchema\x12<.depot.d\
+    evtools.auth.v0.identity.admin.UpdateIdSchemaRequest\x1a=.depot.devtools\
+    .auth.v0.identity.admin.UpdateIdSchemaResponse\x12\x9c\x01\n\x13MarkDefa\
+    ultIdSchema\x12A.depot.devtools.auth.v0.identity.admin.MarkDefaultIdSche\
+    maRequest\x1aB.depot.devtools.auth.v0.identity.admin.MarkDefaultIdSchema\
+    Response\x12\x8d\x01\n\x0eDeleteIdSchema\x12<.depot.devtools.auth.v0.ide\
+    ntity.admin.DeleteIdSchemaRequest\x1a=.depot.devtools.auth.v0.identity.a\
+    dmin.DeleteIdSchemaResponse\x12\x99\x01\n\x12CreateOAuth2Client\x12@.dep\
+    ot.devtools.auth.v0.identity.admin.CreateOAuth2ClientRequest\x1aA.depot.\
+    devtools.auth.v0.identity.admin.CreateOAuth2ClientResponse\x12\x93\x01\n\
+    \x10GetOAuth2Clients\x12>.depot.devtools.auth.v0.identity.admin.GetOAuth\
+    2ClientsRequest\x1a?.depot.devtools.auth.v0.identity.admin.GetOAuth2Clie\
+    ntsResponse\x12\x99\x01\n\x12UpdateOAuth2Client\x12@.depot.devtools.auth\
+    .v0.identity.admin.UpdateOAuth2ClientRequest\x1aA.depot.devtools.auth.v0\
+    .identity.admin.UpdateOAuth2ClientResponse\x12\x99\x01\n\x12DeleteOAuth2\
+    Client\x12@.depot.devtools.auth.v0.identity.admin.DeleteOAuth2ClientRequ\
+    est\x1aA.depot.devtools.auth.v0.identity.admin.DeleteOAuth2ClientRespons\
+    e\x12\x8d\x01\n\x0eGetEmailsSetup\x12<.depot.devtools.auth.v0.identity.a\
+    dmin.GetEmailsSetupRequest\x1a=.depot.devtools.auth.v0.identity.admin.Ge\
+    tEmailsSetupResponse\x12\x96\x01\n\x11UpdateEmailsSetup\x12?.depot.devto\
+    ols.auth.v0.identity.admin.UpdateEmailsSetupRequest\x1a@.depot.devtools.\
+    auth.v0.identity.admin.UpdateEmailsSetupResponse\x12\xa2\x01\n\x15GetUse\
+    rBaseStatistics\x12C.depot.devtools.auth.v0.identity.admin.GetUserBaseSt\
+    atisticsRequest\x1aD.depot.devtools.auth.v0.identity.admin.GetUserBaseSt\
+    atisticsResponseB\xa2\x01\n\x18dev.auth3.identity.adminB\nAdminProtoP\
+    \x01Z'github.com/auth3-dev/go-sdk/admin;admin\xf8\x01\x01\xa2\x02\x04A3I\
+    A\xaa\x02\x14Auth3.Identity.Admin\xca\x02\x14Auth3\\Identity\\Admin\xea\
+    \x02\x16Auth3::Identity::Adminb\x06proto3\
 ";
 
 static file_descriptor_proto_lazy: ::protobuf::rt::LazyV2<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::rt::LazyV2::INIT;
